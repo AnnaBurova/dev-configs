@@ -1,0 +1,761 @@
+{
+
+  // ===== VS CODE SETTINGS =========================================== ======= =================== ====================
+
+  // ----- VS Code interface scale ------------------------------------ ------- ------------------- --------------------
+
+  // Adjust the default zoom level for all windows.
+  //   Each increment above 0 (1) or below (-1) represents zooming 20% larger or smaller.
+  //   You can also enter decimals to adjust the zoom level with a finer granularity.
+  // -8   = 20% (Minimum)
+  // -5   = 50%
+  // -1   = 80%
+  // -0.5 = 90%
+  //  0   = 100% (Default)
+  //  0.5 = 110%
+  //  1   = 120%
+  //  5   = 200%
+  //  8   = 260% (Maximum)
+  // Zoom In:  [Ctrl]+[+]
+  // Zoom Out: [Ctrl]+[-]
+  // Reset:    [Ctrl]+[0]
+  "window.zoomLevel": -0.2,
+
+  // Controls if the 'Zoom In' and 'Zoom Out' commands apply the zoom level
+  //   to all windows or only the active window.
+  // true  = Apply only to the active VS Code window.
+  // false = Apply to all open VS Code windows.
+  "window.zoomPerWindow": true,
+
+  // ----- Control the font size in pixels ---------------------------- ------- ------------------- --------------------
+
+  // Main code editor: Python, JavaScript, JSON, Markdown, etc.
+  "editor.fontSize": 12,
+
+  // Integrated Terminal: PowerShell, Bash, WSL, Python REPL, etc.
+  "terminal.integrated.fontSize": 12,
+
+  // Debug Console: debugger output, evaluated expressions, and runtime messages.
+  "debug.console.fontSize": 12,
+
+  // Code blocks in Copilot Chat.
+  "chat.editor.fontSize": 12,
+
+  // Rendered text in Markdown Preview.
+  "markdown.preview.fontSize": 12,
+
+  // ----- Overrides colors from the currently selected color theme --- ------- ------------------- --------------------
+
+  // Use an 8-digit hex color to control opacity: #RRGGBBAA.
+
+  "workbench.colorCustomizations": {
+    // Color of the editor rulers
+    // "editorRuler.foreground": "#78909C40",
+    "editorRuler.foreground": "#78909C",
+
+    // Separator line below Sticky Scroll in the code editor.
+    "editorStickyScroll.background": "#1E1E1E",
+    "editorStickyScroll.border": "#78909C",
+
+    // Customizes the separator line below Terminal Sticky Scroll.
+    // Note: The sticky-scroll border is visible only when Terminal Sticky Scroll is enabled.
+    "terminalStickyScroll.background": "#1E1E1E",
+    "terminalStickyScroll.border": "#78909C",
+  },
+
+  // ----- Control editor tabs ---------------------------------------- ------- ------------------- --------------------
+
+  // Controls whether editors showing a file that was opened during the session
+  //   should close automatically when getting deleted or renamed by some other process.
+  //   Note: Deleting from within the application will always close the editor
+  //   and that editors with unsaved changes will never close to preserve your data.
+  // true  = Close the tab when the file is deleted or renamed externally.
+  // false = Keep the tab open, mark it as deleted, and allow saving it to restore. (Default)
+  "workbench.editor.closeOnFileDelete": true,
+
+  // Controls whether opened editors should show as individual tabs,
+  //   one single large tab or if the title area should not be shown.
+  // "multiple" = Each editor is displayed as a tab in the editor title area. (Default)
+  // "single"   = The active editor is displayed as a single large tab in the editor title area.
+  // "none"     = The editor title area is not displayed.
+  "workbench.editor.showTabs": "multiple",
+
+  // Controls whether tabs should be wrapped over multiple lines when exceeding available space
+  //   or whether a scrollbar should appear instead.
+  //   Note: Used only with "workbench.editor.showTabs": "multiple".
+  // true  = Wrap tabs onto additional rows when they do not fit horizontally.
+  // false = Keep tabs on one row and use horizontal scrolling. (Default)
+  "workbench.editor.wrapTabs": true,
+
+  // Controls the size of editor tabs.
+  //   Note: Used only with "workbench.editor.showTabs": "multiple".
+  // "fit"    = Always keep tabs large enough to show the full editor label.
+  // "shrink" = Allow tabs to get smaller when space is limited. (Default)
+  //            Tab labels may be truncated.
+  //            Horizontal scrolling is still used when the tabs can no longer shrink enough.
+  // "fixed"  = Give all tabs the same initial width.
+  //            When space is limited, all tabs shrink equally to a minimum width.
+  //            Horizontal scrolling is still used when the tabs can no longer shrink enough.
+  "workbench.editor.tabSizing": "fit",
+
+  // Controls the maximum width of tabs in pixels.
+  //   Note: Used only with "workbench.editor.tabSizing": "fixed".
+  // "workbench.editor.tabSizingFixedMaxWidth": 160,
+
+  // Controls the minimum width of tabs in pixels.
+  //   Note: Used only with "workbench.editor.tabSizing": "fixed".
+  // "workbench.editor.tabSizingFixedMinWidth": 160,
+
+  // ----- Minimap viewport settings for navigation in long files ----- ------- ------------------- --------------------
+
+  // Controls whether the minimap is shown.
+  // true  = Show the minimap. (Default)
+  // false = Hide the minimap.
+  "editor.minimap.enabled": true,
+
+  // Controls when the minimap slider is shown.
+  // "always"    = Always visible.
+  // "mouseover" = Visible only when hovering over the minimap. (Default)
+  "editor.minimap.showSlider": "always",
+
+  // Scale of content drawn in the minimap.
+  // 1 = 100% (Default)
+  // 2 = 200%
+  // 3 = 300%
+  "editor.minimap.scale": 1,
+
+  // ----- Control vertical padding above and below the editor content  ------- ------------------- --------------------
+
+  // Controls the amount of space between the top edge of the editor and the first line.
+  // 0  = No extra top padding. (Default | Minimum)
+  // 30 = Comfortable top padding; prevents the Find widget from covering the first line.
+  "editor.padding.top": 30,
+
+  // Controls the amount of space between the bottom edge of the editor and the last line.
+  // 0  = No extra bottom padding. (Default | Minimum)
+  "editor.padding.bottom": 0,
+
+  // ----- Controls long-line wrapping and editor column guides ------- ------- ------------------- --------------------
+
+  // Controls how lines should wrap.
+  // "off"            = Lines will never wrap. (Default)
+  // "on"             = Lines will wrap at the viewport width.
+  // "wordWrapColumn" = Lines will wrap at "editor.wordWrapColumn".
+  // "bounded"        = Lines will wrap at the minimum of viewport width
+  //                    and at "editor.wordWrapColumn".
+  "editor.wordWrap": "bounded",
+
+  // Controls the wrapping column of the editor.
+  //   Note: Used only with "editor.wordWrap": "wordWrapColumn" | "bounded".
+  // 1  = (Minimum)
+  // 80 = (Default)
+  "editor.wordWrapColumn": 120,
+
+  // Render vertical rulers after a certain number of monospace characters.
+  // Use multiple values for multiple rulers.
+  // No rulers are drawn if array is empty.
+  // "editor.rulers": [120],
+
+  // 72  = PEP 8 recommended maximum for comments and docstrings.
+  // 79  = PEP 8 recommended maximum for Python code.
+  // 80  = Traditional terminal-width reference.
+  // 100 = Common modern team limit.
+  // 120 = Personal maximum line length and wrapping limit.
+
+  // "editor.rulers": [72, 79, 80, 100, 120],
+  "editor.rulers": [
+    { "column":  72, "color": "#4CAF50" },  // Green: prose / documentation
+    { "column":  79, "color": "#42A5F5" },  // Blue: PEP 8 Python code
+    { "column":  80                     },  // Gray: traditional reference
+    { "column": 100, "color": "#FFB300" },  // Amber: modern team limit
+    { "column": 120, "color": "#EF5350" },  // Red: personal maximum / wrap limit
+  ],
+  // "editor.rulers": [
+  //   { "column":  72, "color": "#4CAF5033" },  // Green, about 20% opacity
+  //   { "column":  79, "color": "#42A5F533" },  // Blue, about 20% opacity
+  //   { "column":  80, "color": "#78909C26" },  // Gray, about 15% opacity
+  //   { "column": 100, "color": "#FFB30033" },  // Amber, about 20% opacity
+  //   { "column": 120, "color": "#EF53504D" },  // Red, about 30% opacity
+  // ],
+
+  // ----- Controls Sticky Scroll for code context navigation --------- ------- ------------------- --------------------
+
+  // Shows the nested current scopes during the scroll at the top of the editor.
+  // true  = Show sticky lines for the current class, function, or code block.
+  // false = Disable Sticky Scroll.
+  "editor.stickyScroll.enabled": true,
+
+  // Defines the model to use for determining which lines to stick.
+  //   If the outline model does not exist, it will fall back on the folding provider model,
+  //   which falls back on the indentation model.
+  //   This order is respected in all three cases.
+  // "outlineModel"         = Uses language symbols, such as classes and functions. (Default)
+  // "foldingProviderModel" = Uses foldable regions provided by the language extension.
+  // "indentationModel"     = Uses indentation levels; recommended for Python loops and conditions.
+  "editor.stickyScroll.defaultModel": "indentationModel",
+
+  // Defines the maximum number of sticky lines to show.
+  //   Note: Sticky Scroll is also limited to 40% of the editor height.
+  // 1  = (Minimum)
+  // 5  = (Default)
+  // 20 = (Maximum)
+  "editor.stickyScroll.maxLineCount": 20,
+
+  // ----- File saving, encoding, and whitespace cleanup -------------- ------- ------------------- --------------------
+
+  // Controls auto save of editors that have unsaved changes.
+  // "off"            = Never automatically saved. Save files manually only. (Default)
+  // "afterDelay"     = Automatically saved after the delay configured in "files.autoSaveDelay".
+  // "onFocusChange"  = Automatically saved when the editor / file loses focus.
+  // "onWindowChange" = Automatically saved when the VS Code window / app loses focus.
+  "files.autoSave": "onFocusChange",
+
+  // Controls the delay in milliseconds after which an editor with unsaved changes
+  //   is saved automatically.
+  //   Note: Used only with "files.autoSave": "afterDelay".
+  // 0    = (Minimum)
+  // 1000 = (Default)
+  // "files.autoSaveDelay": 1000,
+
+  // When enabled, the editor will attempt to guess the character set encoding when opening files.
+  //   Note: This setting is not respected by text search. Only "files.encoding" is respected.
+  // true  = Try to detect encodings.
+  // false = Open files using the encoding set in "files.encoding". (Default)
+  "files.autoGuessEncoding": false,
+
+  // The default character set encoding to use when reading and writing files.
+  // "utf8"    = UTF-8 without BOM; recommended for source code, Git, and web files. (Default)
+  // "utf8bom" = UTF-8 with BOM; use for Windows PowerShell 5.1 or Excel-compatible CSV.
+  "files.encoding": "utf8",
+
+  // The default end of line character.
+  // "\n"   = LF; standard for Linux, macOS, Git, Docker, and most repositories.
+  // "\r\n" = CRLF; traditional Windows line ending.
+  // "auto" = Uses operating system specific end of line character
+  //          or detect the existing file's line ending. (Default)
+  "files.eol": "\n",
+
+  // Controls the final new line at the end of the file when saving it.
+  // true  = Ensure that the last line ends with a newline character.
+  // false = Preserve the file's existing end-of-file state. (Default)
+  "files.insertFinalNewline": true,
+
+  // Controls the final new line at the end of code cells when saving a Jupyter Notebook.
+  // true  = Add a newline character at the end of every saved notebook cell.
+  // false = Preserve each cell's existing end-of-content state. (Default)
+  "notebook.insertFinalNewline": true,
+
+  // Controls trim trailing whitespace when saving a file.
+  // true  = Remove all spaces and tabs at the end of lines on save.
+  // false = Preserve trailing spaces and tabs.
+  "files.trimTrailingWhitespace": true,
+
+  // Remove obsolete trailing whitespace inserted automatically by VS Code.
+  //   Works while editing and affects only trailing whitespace created by auto-indent.
+  //   It preserves whitespace that was intentionally typed or pasted by the user.
+  // true  = Remove unnecessary auto-inserted spaces while editing.
+  // false = Keep all auto-inserted whitespace.
+  "editor.trimAutoWhitespace": true,
+
+  // ----- Indentation and whitespace rendering ----------------------- ------- ------------------- --------------------
+
+  // Controls whether other settings will be automatically detected
+  //   when a file is opened based on the file contents.
+  //   - "editor.tabSize"
+  //   - "editor.insertSpaces"
+  // true  = Detect tab size and spaces/tabs automatically. (Default)
+  // false = Always use explicitly configured indentation settings
+  //         unless other configuration overrides them.
+  "editor.detectIndentation": false,
+
+  // Insert spaces when pressing Tab.
+  //   Note: Used only with "editor.detectIndentation": false.
+  // true  = Insert spaces. (Default)
+  // false = Insert literal tab characters (\t).
+  "editor.insertSpaces": true,
+
+  // The number of spaces a tab is equal to.
+  //   Note: Used only with "editor.detectIndentation": false.
+  // 1   = (Minimum)
+  // 4   = (Default)
+  // 100 = (Maximum)
+  "editor.tabSize": 2,
+
+  // Controls how the editor should render whitespace characters.
+  // "none"      = Do not render whitespace markers. (Default)
+  // "boundary"  = Render whitespace characters except for single spaces between words.
+  // "selection" = Render whitespace characters only on selected text.
+  // "trailing"  = Render only trailing whitespace characters.
+  // "all"       = Render all spaces and tab characters.
+  "editor.renderWhitespace": "all",
+
+  // Controls whether the editor should render ASCII and Unicode control characters.
+  //   Note: This is separate from ordinary spaces, tabs, and trailing whitespace.
+  //   Recommended: use an extension such as Gremlins
+  //   to detect suspicious invisible Unicode characters and bidirectional controls.
+  // true  = Show supported control characters in the editor.
+  // false = Do not render control-character markers. (Default)
+  "editor.renderControlCharacters": true,
+
+  // Controls whether whitespace is rendered with a new, experimental method.
+  //   Select the rendering engine used for whitespace markers.
+  //   Note: Experimental modes may change, be removed or render differently after VS Code updates.
+  // "font" = Use a new rendering method with font characters.
+  // "svg"  = Use a new rendering method with SVGs. (Default)
+  // "off"  = Use the stable rendering method.
+  "editor.experimentalWhitespaceRendering": "font",
+
+  // Controls whether the editor should automatically adjust the indentation
+  //   when users type, paste, move or indent lines.
+  // "none"     = Not insert indentation automatically.
+  // "keep"     = Keep the current line's indentation.
+  // "brackets" = + honor language defined brackets.
+  // "advanced" = + invoke special onEnterRules defined by languages.
+  // "full"     = + honor indentationRules defined by languages. (Default)
+  "editor.autoIndent": "full",
+
+  // ----- Accessibility and visual clarity --------------------------- ------- ------------------- --------------------
+
+  // Controls whether links should be underlined in the workbench.
+  // true  = Underline supported links in the VS Code interface.
+  // false = Do not underline links. (Default)
+  "accessibility.underlineLinks": true,
+
+  // ----- Unicode security highlighting ------------------------------ ------- ------------------- --------------------
+
+  // Controls whether all non-basic ASCII characters are highlighted.
+  //   Only characters between U+0020 and U+007E,
+  //   tab, line-feed and carriage-return are considered basic ASCII.
+  // "inUntrustedWorkspace" = (Default)
+  //         Highlight every non-Basic-ASCII characters only in untrusted workspaces.
+  // true  = Highlight every non-Basic-ASCII character in all workspaces.
+  // false = Do not highlight characters.
+  "editor.unicodeHighlight.nonBasicASCII": true,
+
+  // Controls whether characters are highlighted that can be confused with basic ASCII characters,
+  //   except those that are common in the current user locale.
+  // true  = Highlight potentially confusable Unicode characters. (Default)
+  // false = Do not highlight visually ambiguous Unicode characters.
+  "editor.unicodeHighlight.ambiguousCharacters": true,
+
+  // Controls whether characters that just reserve space or have no width at all are highlighted.
+  // true  = Highlight invisible or space-reserving Unicode characters. (Default)
+  // false = Do not highlight invisible or space-reserving Unicode characters.
+  "editor.unicodeHighlight.invisibleCharacters": true,
+
+  // Controls whether characters in comments should also be subject to Unicode highlighting.
+  // "inUntrustedWorkspace" = (Default)
+  //         Apply Unicode highlighting inside comments only in untrusted workspaces.
+  // true  = Apply Unicode highlighting inside comments in all workspaces.
+  // false = Do not apply Unicode highlighting inside comments.
+  "editor.unicodeHighlight.includeComments": true,
+
+  // Controls whether characters in strings should also be subject to Unicode highlighting.
+  // "inUntrustedWorkspace" =
+  //         Apply Unicode highlighting inside strings only in untrusted workspaces.
+  // true  = Apply Unicode highlighting inside strings in all workspaces. (Default)
+  // false = Do not apply Unicode highlighting inside string literals.
+  "editor.unicodeHighlight.includeStrings": true,
+
+  // ----- Controls the built-in editor for comparing file changes ---- ------- ------------------- --------------------
+
+  // When enabled, the diff editor ignores changes in leading or trailing whitespace.
+  // true  = Ignore whitespace differences at the beginning and end of lines. (Default)
+  // false = Show whitespace differences. Useful for reviewing formatting changes.
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // Controls whether the diff editor should show detected code moves.
+  // true  = Detect moved code blocks and draw arrows between their old and new locations.
+  // false = Do not detect or highlight moved code blocks. (Default)
+  "diffEditor.experimental.showMoves": true,
+
+  // ----- Enables performance optimizations for large files ---------- ------- ------------------- --------------------
+
+  // Timeout in milliseconds after which diff computation is cancelled.
+  // Value is measured in milliseconds (ms).
+  // 0    = No time limit; always compute the most accurate diff.
+  // 5000 = Stop after 5 seconds, potentially less precise result. (Default)
+  "diffEditor.maxComputationTime": 5000,
+
+  // Maximum file size in MB for which to compute diffs.
+  // Value is measured in megabytes (MB).
+  // 0  = Disable the file-size limit.
+  // 1  = Skip detailed diff computation for files larger than 1 MB.
+  // 50 = MB (Default)
+  "diffEditor.maxFileSize": 1,
+
+  // Special handling for large files to disable certain memory intensive features.
+  // true  = Limit expensive editor and language features for large files.
+  //         Helps prevent slowdowns, freezes, and excessive memory usage.
+  // false = Keep all editor features enabled, even for large files.
+  //         May reduce performance or cause VS Code to become unresponsive.
+  "editor.largeFileOptimizations": true,
+
+  // ----- Integrated terminal: appearance, encoding, profiles, and session behavior -------------- --------------------
+
+  // Shows the current command at the top of the terminal.
+  // true  = Show sticky command lines in the terminal. (Default)
+  // false = Do not show sticky command lines in the terminal.
+  "terminal.integrated.stickyScroll.enabled": true,
+
+  // Defines the maximum number of sticky lines to show.
+  // Sticky scroll lines will never exceed 40% of the viewport regardless of this setting.
+  // 1  = (Minimum)
+  // 5  = (Default)
+  // 10 = (Maximum)
+  "terminal.integrated.stickyScroll.maxLineCount": 1,
+
+  // Controls the line height of the terminal.
+  // This number is multiplied by the terminal font size to get the actual line-height in pixels.
+  //   1   = Normal line height with no additional spacing.
+  //   1.2 = 20% additional vertical spacing.
+  //   1.5 = 50% additional vertical spacing.
+  "terminal.integrated.lineHeight": 1,
+
+  // Object with environment variables that will be added to the VS Code process
+  //   to be used by the terminal on Windows.
+  "terminal.integrated.env.windows": {
+    "PYTHONIOENCODING": "utf-8",
+  },
+
+  // Controls whether the terminal will leverage the GPU to do its rendering.
+  // "auto" = Let VS Code detect which renderer will give the best experience. (Default)
+  // "on"   = Enable GPU acceleration within the terminal.
+  // "off"  = Disable GPU acceleration within the terminal.
+  //          The terminal will render much slower when GPU acceleration is off
+  //          but it should reliably work on all systems.
+  "terminal.integrated.gpuAcceleration": "auto",
+
+  // Whether to draw custom glyphs instead of using the font for the following unicode ranges:
+  //   Box Drawing (U+2500-U+257F)
+  //   Block Elements (U+2580-U+259F)
+  //   Braille Patterns (U+2800-U+28FF)
+  //   Powerline Symbols (U+E0A0-U+E0D4, Private Use Area)
+  //   Progress Indicators (U+EE00-U+EE0B, Private Use Area)
+  //   Git Branch Symbols (U+F5D0-U+F60D, Private Use Area)
+  //   Symbols for Legacy Computing (U+1FB00-U+1FBFF)
+  // """
+  //  ▁  ▂  ▃  ▄  ▅  ▆  ▇  █
+
+  //  ░  ▒  ▓  █
+
+  //  ▀  ▄  ▌  ▐
+
+  //  ▖  ▗  ▘  ▝  ▚  ▞
+
+  //  Download: █ █ █ █ █ █ █ █ ░ ░ 80%
+
+  //              
+  // """
+  // This will typically result in better rendering with continuous lines,
+  //   even when line height and letter spacing is used.
+  //   Note: Used only when "terminal.integrated.gpuAcceleration" enabled.
+  "terminal.integrated.customGlyphs": true,
+
+  // Controls whether to show a warning dialog when pasting multiple lines into the terminal.
+  // "auto"   = Enable the warning but do not show it when: (Default)
+  //            Bracketed paste mode is enabled (the shell supports multi-line paste natively)
+  //            The paste is handled by the shell's readline (in the case of pwsh)
+  // "always" = Always show the warning if the text contains a new line.
+  // "never"  = Never show the warning.
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+
+  // The default terminal profile on Windows.
+  // null                        = Automatically detect the default (Default)
+  // "PowerShell"                = C:\Users\User\AppData\Local\Microsoft\WindowsApps
+  //                               \Microsoft.PowerShell_8wekyb3d8bbwe\pwsh.exe
+  // "Windows PowerShell"        = C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+  // "Git Bash"                  = C:\Program Files\Git\bin\bash.exe
+  // "Command Prompt"            = C:\WINDOWS\System32\cmd.exe
+  // "Ubuntu (WSL)"              = Value is not accepted.
+  // "JavaScript Debug Terminal" = extensionIdentifier: ms-vscode.js-debug
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  // Persist terminal sessions/history for the workspace across window reloads.
+  // true  = Save and restore terminal sessions. (Default)
+  // false = Do not restore previous terminal sessions.
+  "terminal.integrated.enablePersistentSessions": false,
+
+  // When the terminal process must be shut down,
+  //   this determines when the previous terminal session contents/history should be restored
+  //   and processes be recreated when the workspace is next opened.
+  // "onExit"               = Revive the processes after the last window is closed on Windows/Linux
+  //                          or when the workbench.action.quit command is triggered. (Default)
+  // "onExitAndWindowClose" = Revive the processes after the last window is closed on Windows/Linux
+  //                          or when the workbench.action.quit command is triggered,
+  //                          or when the window is closed.
+  // "never"                = Never restore the terminal buffers or recreate the process.
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+
+  // ----- Python type checking and auto-import completions ----------- ------- ------------------- --------------------
+
+  // Controls the level of static type checking performed by Pylance.
+  //   Note: Pylance uses Pyright to analyze Python code without running it.
+  // "off"      = Disable type checking; (Default)
+  //              unresolved imports and undefined variables are still reported.
+  // "basic"    = Enable basic type checking for common mistakes. (Recommended)
+  //     - Variable type mismatches
+  //     - Function return type checks
+  // "standard" = Enable additional type checking rules.
+  //     - Type narrowing enforcement
+  //     - Checking of Any type
+  //     - Private/protected access checks
+  //     - Enforces stricter generics usage
+  // "strict"   = Enable the most comprehensive and strict type checking rules.
+  //     - Reports missing type annotations
+  //     - Disallows Any type usage
+  //     - Requires strict type compatibility
+  //     - Enforces complete type coverage
+  "python.analysis.typeCheckingMode": "strict",
+
+  // Controls whether Pylance suggests symbols that are not imported yet.
+  //   Note: Accepting an auto-import completion automatically adds the required
+  //   import statement at the top of the Python file.
+  //   Example: Typing "Path" can suggest "from pathlib import Path".
+  // true  = Show completions for symbols that can be imported automatically.
+  // false = Show completions only for symbols already imported or defined in scope. (Default)
+  "python.analysis.autoImportCompletions": true,
+
+  // ===== EXTENSION SETTINGS ========================================= ======= =================== ====================
+
+  // ----- Gremlins: highlights invisible and suspicious Unicode characters --- ------------------- --------------------
+
+  // Extension: https://github.com/nhoizey/vscode-gremlins
+
+  // Show gremlins in the problem pane.
+  // true  = Show detected characters in the Problems panel.
+  // false = Highlight characters in the editor only.
+  "gremlins.showInProblemPane": true,
+
+  // Custom Unicode character rules:
+  // "level": "error",
+  // "level": "warning",
+  // "level": "none", = Do not highlight or report the character.
+
+  "gremlins.characters": {
+
+    // ----- Invisible characters: ------------------------------------ ------- --------------------
+    // treat them as errors because they can cause hidden text issues
+
+    "00ad": {
+      // "  ­  "
+      // true = Render as a zero-width/invisible character.
+      "zeroWidth": true,
+      "level": "error",
+      "description": "Soft hyphen",
+    },
+    "200b": {
+      // "  ​  "
+      "zeroWidth": true,
+      "level": "error",
+      "description": "Zero width space",
+    },
+    "200c": {
+      // "  ‌  "
+      "zeroWidth": true,
+      "level": "error",
+      "description": "Zero width non-joiner",
+    },
+    "200d": {
+      // "  ‍  "
+      "zeroWidth": true,
+      "level": "error",
+      "description": "Zero width joiner",
+    },
+    "2060": {
+      // "  ⁠  "
+      "zeroWidth": true,
+      "level": "error",
+      "description": "Word joiner",
+    },
+    "feff": {
+      // "  ﻿  "
+      "zeroWidth": true,
+      "level": "error",
+      "description": "Zero width no-break space (BOM)",
+    },
+
+    // Bidirectional controls can make displayed code differ from actual code.
+    "200e-200f": {
+      // "  ‎  ‏  "
+      "zeroWidth": true,
+      "level": "error",
+      "description": "Bidirectional text mark",
+    },
+    "202a-202e": {
+      // "  ‪  ‫  ‬  ‭  ‮  "
+      "zeroWidth": true,
+      "level": "error",
+      "description": "Bidirectional embedding and override controls",
+    },
+    "2066-2069": {
+      // "  ⁦  ⁧  ⁨  ⁩  "
+      "zeroWidth": true,
+      "level": "error",
+      "description": "Bidirectional isolate controls",
+    },
+
+    // ----- Allowed typography characters: --------------------------- ------- --------------------
+    // do not report them as problems
+    //  ’  “  ”  –
+
+    "2019": { "level": "none", "description": "Right single quotation mark" },
+    "201c": { "level": "none", "description": "Left double quotation mark" },
+    "201d": { "level": "none", "description": "Right double quotation mark" },
+    "2013": { "level": "none", "description": "En dash" },
+
+    // Allowed typography characters: report them as problems
+    // "2019": { "level": "warning", "description": "Right single quotation mark" },
+    // "201c": { "level": "warning", "description": "Left double quotation mark" },
+    // "201d": { "level": "warning", "description": "Right double quotation mark" },
+    // "2013": { "level": "warning", "description": "En dash" },
+
+    // ----- Individual characters ------------------------------------ ------- --------------------
+
+    // Optional Unicode character checks:
+    //   Uncomment individual rules below to detect specific look-alike,
+    //   typographic, mathematical, or non-Latin characters as warnings.
+
+    //  一  —  ―  −  ´  `
+
+    "4e00": { "level": "warning", "description": "CJK ideograph one" },
+    "2014": { "level": "warning", "description": "Em dash" },
+    "2015": { "level": "warning", "description": "Horizontal bar" },
+    "2212": { "level": "warning", "description": "Minus sign" },
+    "00b4": { "level": "warning", "description": "Acute accent" },
+    "0060": { "level": "warning", "description": "Grave accent" },
+
+    //  ²  ¨  ·  •  ・  µ  ≥  ×
+
+    "00b2": { "level": "warning", "description": "Superscript two" },
+    "00a8": { "level": "warning", "description": "Diaeresis" },
+    "00b7": { "level": "warning", "description": "Middle dot" },
+    "2022": { "level": "warning", "description": "Bullet" },
+    "30fb": { "level": "warning", "description": "Katakana middle dot" },
+    "00b5": { "level": "warning", "description": "Micro sign" },
+    "2265": { "level": "warning", "description": "Greater-than or equal to" },
+    "00d7": { "level": "warning", "description": "Multiplication sign" },
+
+    // ----- Unicode ranges ------------------------------------------- ------- --------------------
+
+    "0400-04ff": { "level": "warning", "description": "Cyrillic" },
+    // "0080-00ff": { "level": "warning", "description": "Latin-1 Supplement" },  // exclude 00ad
+    "0080-00ac": { "level": "warning", "description": "Latin-1 Supplement" },
+    "00ae-00ff": { "level": "warning", "description": "Latin-1 Supplement" },
+    "0300-036f": { "level": "warning", "description": "Combining diacritical marks" },
+    "3040-30ff": { "level": "warning", "description": "Japanese Hiragana and Katakana" },
+    "4e00-9fff": { "level": "warning", "description": "CJK Unified Ideographs" },
+    "ac00-d7af": { "level": "warning", "description": "Korean Hangul syllables" },
+    "1100-11ff": { "level": "warning", "description": "Korean Hangul Jamo" },
+
+    // ----- Detect fullwidth and halfwidth character forms as errors - ------- --------------------
+
+    // These often appear after copying text from East Asian websites or documents.
+    "ff00-ffef": {
+      "level": "error",
+      "zeroWidth": false,  // false = The character occupies visible space
+      "description": "Halfwidth and Fullwidth Forms",
+    },
+
+  },
+
+  // ----- AI and Copilot features ------------------------------------ ------- ------------------- --------------------
+
+  // Disable VS Code built-in AI and Copilot features, including chat and inline suggestions.
+  //   third-party AI extensions may still work independently.
+  // true  = Disable and hide built-in AI features provided by GitHub Copilot.
+  // false = Enable VS Code built-in AI features. (Default)
+  "chat.disableAIFeatures": true,
+
+  // ===== PROJECT SPECIFICS ========================================== ======= =================== ====================
+
+  // Controls whether entries in .gitignore should be parsed and excluded from the Explorer.
+  // true  = Hide Git-ignored files and folders in the Explorer.
+  // false = Show Git-ignored files and folders in the Explorer. (Default)
+  "explorer.excludeGitIgnore": false,
+
+  // Configure glob patterns for excluding files and folders.
+  //   File Explorer decides which files and folders to show or hide based on this setting.
+  // true  = Hide matching files or folders.
+  // false = Show matching files or folders.
+  "files.exclude": {
+    "**/.git": false,
+    "**/.hg": false,
+    "**/.svn": false,
+    "**/.DS_Store": false,
+    "**/Thumbs.db": false,
+  },
+
+  // Configure glob patterns for excluding files and folders in fulltext searches
+  //   and file search in quick open.
+  //   To exclude files from the recently opened list in quick open,
+  //   patterns must be absolute (for example **/node_modules/**).
+  //   Inherits all glob patterns from the "files.exclude" setting.
+  // true  = Exclude matching files and folders from search results and Quick Open.
+  // false = Include matching files and folders.
+  "search.exclude": {
+    "**/node_modules": false,  // TODO
+    "**/bower_components": false,  // TODO
+    "**/*.code-search": false,  // TODO
+  },
+
+  // Additional import search resolution paths
+  "python.analysis.extraPaths": [
+  ],
+
+  // Paths of directories or files that should not be included.
+  //   These override the include directories, allowing specific subdirectories to be excluded.
+  //   Note: Files in the exclude paths may still be included in the analysis
+  //   if they are referenced (imported) by source files that are not excluded.
+  //   Paths may contain wildcard characters:
+  //   ** - a directory or multiple levels of directories,
+  //   *  - a sequence of zero or more characters or
+  //   ?  - a single character.
+  "python.analysis.exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/build",
+    "**/.*",
+    // Local Python virtual environments
+    ".venv*",
+    "**/.venv*",
+    "**/env",
+    // Generated result folders
+  ],
+
+  // ===== OVERRIDES ================================================== ======= =================== ====================
+
+  "[python]": {
+    "editor.tabSize": 4,
+  },
+
+  "[sql]": {
+    "editor.tabSize": 4,
+  },
+
+  "[powershell]": {
+    "editor.tabSize": 4,
+    "gremlins.characters": {
+      //  `
+      "0060": { "level": "none", "description": "Grave accent" },
+    },
+  },
+
+  "[markdown]": {
+    // Markdown hard line breaks use two or more trailing spaces.
+    "files.trimTrailingWhitespace": false,
+    "editor.trimAutoWhitespace": false,
+    "gremlins.characters": {
+      //  `
+      "0060": { "level": "none", "description": "Grave accent" },
+    },
+  },
+
+  "[plaintext]": {
+    "files.trimTrailingWhitespace": false,
+    "editor.trimAutoWhitespace": false,
+  },
+
+  // ===== END ======================================================== ======= =================== ====================
+
+}

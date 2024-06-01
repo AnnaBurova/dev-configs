@@ -1,0 +1,8 @@
+// Place your key bindings in this file to override the defaults
+// C:\Users\User\AppData\Roaming\Code\User\keybindings.json
+[
+  {
+    "key": "f9",
+    "command": "editor.action.sortLinesAscending",
+  }
+]
