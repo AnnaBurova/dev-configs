@@ -391,6 +391,20 @@
   //         May reduce performance or cause VS Code to become unresponsive.
   "editor.largeFileOptimizations": true,
 
+  // ----- Paste behavior and clipboard processing -------------------- ------- ------------------- --------------------
+
+  // Controls whether you can paste content in different ways.
+  // true  = Enable Paste As processing. (Default)
+  // false = Paste text directly without waiting for Paste As providers.
+  "editor.pasteAs.enabled": false,
+
+  // Automatically update imports when pasting code. Requires TypeScript 5.6+.
+  "js/ts.updateImportsOnPaste.enabled": false,
+
+  // Controls whether the editor should automatically format the pasted content.
+  // A formatter must be available and the formatter should be able to format a range in a document.
+  "editor.formatOnPaste": false,
+
   // ----- Integrated terminal: appearance, encoding, profiles, and session behavior -------------- --------------------
 
   // Shows the current command at the top of the terminal.
