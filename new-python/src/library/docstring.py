@@ -22,6 +22,8 @@ Functions:
         ) -> tuple[int, str]
 """
 
+from __future__ import annotations
+
 
 def docstring_example(
         param1: int,
