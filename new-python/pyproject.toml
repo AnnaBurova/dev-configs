@@ -4,6 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 # Name on PyPI must be available.
+# pip install dev-library
 name = "dev-library"
 version = "0.1.0"
 description = "Development project description"
