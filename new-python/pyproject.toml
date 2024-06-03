@@ -17,6 +17,7 @@ authors = [
 ]
 
 dependencies = [
+  "colorama>=0.4.6",
 ]
 
 keywords = [
@@ -42,6 +43,8 @@ classifiers = [
 
 [project.optional-dependencies]
 test = [
+  "pytest>=9.1.1",
+  "pytest-cov>=7.1.0",
 ]
 
 [project.urls]
@@ -51,7 +54,7 @@ issues = "https://github.com/AnnaBurova/dev-library/issues"
 changelog = "https://github.com/AnnaBurova/dev-library/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
-packages = ["library"]
+packages = ["src/library"]
 only-packages = true
 
 [tool.hatch.build.targets.sdist]
