@@ -15,6 +15,8 @@ dev-library/           # Root repository
 ├── tests/
 │   ├── test_docstring.py
 │   ├── test_module.py
+│   ├── test_*.py      # Pytest test scripts for modules
+│   ├── test_*_*.py    # Pytest test scripts for functions
 │   └── (other test scripts)
 │
 ├── CHANGELOG.md       # Version history and release notes
