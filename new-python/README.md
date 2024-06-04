@@ -1,6 +1,5 @@
 # new-python
 
-![CI](https://github.com/username/repo/actions/workflows/ci.yml/badge.svg)
 [![Python](https://img.shields.io/badge/python-3.14-blue.svg)](https://www.python.org/)
 [![Python](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/)
 [![Python](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)

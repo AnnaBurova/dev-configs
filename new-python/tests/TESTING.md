@@ -1,4 +1,4 @@
-# Testing
+# Testing XXX
 
 This directory contains comprehensive unit tests for the **XXX** package.
 
@@ -7,81 +7,186 @@ This directory contains comprehensive unit tests for the **XXX** package.
 - test_docstring.py
 - test_module.py
 
-## Requirements
+## Test Environment
 
-- pytest
-- pytest-cov
+Before running the tests, install the package and test dependencies
+in the available virtual environments.
+
+The script updates the package in the configured virtual environments
+using editable installation and installs the test dependencies from the `test` group.
+
+Use the PowerShell helper script:
 
 ```bash
-# Install packages:
-$ pip install pytest
-$ pip install pytest-cov
+$ ./dev-library/tests/_update_venv.ps1
+```
+
+OR:
+
+```bash
+$ cd ./dev-library/tests
+$ ./_update_venv.ps1
+```
+
+If you do not want to use the helper script,
+install the dependencies manually in the currently active virtual environment:
+
+```bash
+$ python -m pip install -e ".[test]"
+```
+
+The `test` group should provide the required testing packages, including:
+
+- `pytest`
+- `pytest-cov`
+
+## Running Tests using PyTest
+
+```bash
+# Navigate to the project directory:
+$ cd dev-library/
+
+# Run all tests:
+$ pytest tests/
+# OR Run a specific test file:
+$ pytest tests/test_docstring.py
+$ pytest tests/test_module.py
+```
+
+OR run pytest from inside the `tests` directory:
+
+```bash
+# Navigate to the tests directory:
+$ cd dev-library/tests/
+
+# Run all tests:
+$ pytest .
+# OR Run a specific test file:
+$ pytest ./test_docstring.py
+$ pytest ./test_module.py
+```
+
+### Pytest Options
+
+- `-v` — enables verbose pytest output
+- `-vv` — enables extra verbose pytest output
+- `-s` — shows output from print() statements
+- `> test_results.txt` — saves standard output to a file.
+- `>` — Creates (or overwrites) the output.txt file.
+- `>>` — Appends output to the end of an existing file.
+- `2>&1` — Redirects stderr to the same destination as stdout
+
+Run with different options:
+
+```bash
+# Navigate to the project directory:
+$ cd dev-library/
+
+$ pytest tests/
+$ pytest tests/ -vv
+$ pytest tests/ -s
+$ pytest tests/ -s -vv
+$ pytest tests/ -s -vv > test_results.txt 2>&1
+```
+
+## Batch Test Runner
+
+### `_run_tests.sh`
+
+`_run_tests.sh` runs selected test modules in the configured virtual environments.
+
+The script uses the virtual environments configured inside `_run_tests.sh`.
+Run `_update_venv.ps1` first if the environments need to be updated
+with the project and test dependencies.
+
+It runs each module with four pytest configurations:
+
+1. Default mode.
+2. Verbose mode (`-v`).
+3. Show `print()` output (`-s`).
+4. Verbose mode with `print()` output (`-s -v`).
+
+Test results are saved in the `dev-library/tests/output/` directory.
+
+Example output files:
+
+```text
+output/venv314_test_docstring_1.txt
+output/venv314_test_docstring_2.txt
+output/venv314_test_docstring_3.txt
+output/venv314_test_docstring_4.txt
+```
+
+The filename format is:
+
+```text
+<virtual-environment>_test_<module>_<mode>.txt
+```
+
+If pytest is not found in a virtual environment, that environment is skipped.
+
+### Run the Batch Test Runner
+
+The script is intended to be run from Git Bash or WSL on Windows,
+or directly from a Bash-compatible shell on Linux.
+
+```bash
+# Navigate to the tests directory:
+$ cd dev-library/tests/
+
+# On Linux or WSL, make the script executable:
+$ chmod +x _run_tests.sh
+
+# Run the script:
+$ ./_run_tests.sh
 ```
 
 ## Test Coverage
 
-### What is coverage?
+### What Is Coverage?
 
-**Code coverage** measures how much of your source code is executed by tests.
-It shows:
+Code coverage shows which parts of the source code are executed by the tests.
+It can help identify:
 
-- Which lines of code were run during tests
-- Which functions were called
-- Which branches (if/else) were tested
-- Overall percentage of code covered
+- untested lines;
+- untested functions;
+- untested logic branches (if/else);
+- the overall coverage percentage.
 
-### Usage
+### Run Coverage
 
 ```bash
 # Navigate to the project directory:
 $ cd dev-library/
 
 # Run all tests with code coverage analysis:
-$ pytest tests/ --cov=library --cov-report=html
+$ pytest tests/ --cov=library --cov-report=html --cov-report=term-missing
 # OR Run a specific test file with code coverage analysis:
-$ pytest tests/test_console.py --cov=library --cov-report=html
+$ pytest tests/test_docstring.py --cov=library --cov-report=html --cov-report=term-missing
+$ pytest tests/test_module.py --cov=library --cov-report=html --cov-report=term-missing
 ```
 
-This generates an `htmlcov/` folder containing the coverage report.
-Open `htmlcov/index.html` in your browser to see a detailed coverage report
-with highlighted lines (green = covered, red = not covered).
+These commands create an `htmlcov/` directory containing the report.
+The report highlights covered and uncovered lines.
+(green = covered, red = not covered)
+Open the report in a browser:
 
 ```bash
 $ start htmlcov/index.html
 ```
 
-## Running Tests Using PyTest
+## Helper Functions
 
-```bash
-# Navigate to the project directory:
-$ cd dev-library/
+The `helpers.py` file contains reusable functions for tests.
 
-# Run all tests:
-$ pytest tests/
-# OR Run a specific test file:
-$ pytest tests/test_console.py
-```
+These helpers can be used to:
 
-OR
+- print the name of the current test function;
+- display captured standard output and standard error;
+- format test output for easier debugging.
 
-```bash
-# Navigate to the tests directory:
-$ cd dev-library/tests/
-# Run all tests:
-$ pytest .
-# OR Run a specific test file:
-$ pytest ./test_console.py
-```
-
-Run with verbose output:
-
-```bash
-$ pytest tests/
-$ pytest tests/ -v
-$ pytest tests/ -s
-$ pytest tests/ -s -v
-$ pytest tests/ -s -v > test_results.txt 2>&1
-```
+The helper functions are optional.
+Tests can also use `capsys.readouterr()` and normal `print()` statements directly.
 
 ## Notes
 
