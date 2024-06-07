@@ -279,7 +279,7 @@
   // 1   = (Minimum)
   // 4   = (Default)
   // 100 = (Maximum)
-  "editor.tabSize": 2,
+  "editor.tabSize": 4,
 
   // Controls how the editor should render whitespace characters.
   // "none"      = Do not render whitespace markers. (Default)
@@ -382,7 +382,7 @@
   // 0  = Disable the file-size limit.
   // 1  = Skip detailed diff computation for files larger than 1 MB.
   // 50 = MB (Default)
-  "diffEditor.maxFileSize": 1,
+  "diffEditor.maxFileSize": 2,
 
   // Special handling for large files to disable certain memory intensive features.
   // true  = Limit expensive editor and language features for large files.
@@ -417,7 +417,7 @@
   // 1  = (Minimum)
   // 5  = (Default)
   // 10 = (Maximum)
-  "terminal.integrated.stickyScroll.maxLineCount": 1,
+  "terminal.integrated.stickyScroll.maxLineCount": 3,
 
   // Controls the line height of the terminal.
   // This number is multiplied by the terminal font size to get the actual line-height in pixels.
@@ -693,11 +693,12 @@
   // true  = Hide matching files or folders.
   // false = Show matching files or folders.
   "files.exclude": {
-    "**/.git": false,
-    "**/.hg": false,
-    "**/.svn": false,
-    "**/.DS_Store": false,
-    "**/Thumbs.db": false,
+    "**/.git": false,  // DEFAULT true
+    "**/.hg": false,  // DEFAULT true
+    "**/.jj": false,  // DEFAULT true
+    "**/.svn": false,  // DEFAULT true
+    "**/.DS_Store": false,  // DEFAULT true
+    "**/Thumbs.db": false,  // DEFAULT true
   },
 
   // Configure glob patterns for excluding files and folders in fulltext searches
@@ -708,9 +709,9 @@
   // true  = Exclude matching files and folders from search results and Quick Open.
   // false = Include matching files and folders.
   "search.exclude": {
-    "**/node_modules": false,  // TODO
-    "**/bower_components": false,  // TODO
-    "**/*.code-search": false,  // TODO
+    "**/node_modules": false,  // DEFAULT true
+    "**/bower_components": false,  // DEFAULT true
+    "**/*.code-search": false,  // DEFAULT true
   },
 
   // Additional import search resolution paths
@@ -726,29 +727,15 @@
   //   *  - a sequence of zero or more characters or
   //   ?  - a single character.
   "python.analysis.exclude": [
-    "**/node_modules",
-    "**/__pycache__",
-    "**/build",
-    "**/.*",
-    // Local Python virtual environments
-    ".venv*",
-    "**/.venv*",
-    "**/env",
-    // Generated result folders
   ],
 
   // ===== OVERRIDES ================================================== ======= =================== ====================
 
-  "[python]": {
-    "editor.tabSize": 4,
-  },
-
-  "[sql]": {
-    "editor.tabSize": 4,
+  "[json][jsonc]": {
+    "editor.tabSize": 2,
   },
 
   "[powershell]": {
-    "editor.tabSize": 4,
     "gremlins.characters": {
       //  `
       "0060": { "level": "none", "description": "Grave accent" },
