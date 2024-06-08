@@ -367,7 +367,7 @@
   // Controls whether the diff editor should show detected code moves.
   // true  = Detect moved code blocks and draw arrows between their old and new locations.
   // false = Do not detect or highlight moved code blocks. (Default)
-  "diffEditor.experimental.showMoves": true,
+  "diffEditor.experimental.showMoves": false,
 
   // ----- Enables performance optimizations for large files ---------- ------- ------------------- --------------------
 
