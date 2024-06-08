@@ -26,13 +26,19 @@ Copyright (c) 20XX Anna Burova
 
 All rights reserved.
 
-Without written permission from Anna Burova, it is prohibited to:
-- copy
-- modify
-- distribute
-- sell
-- use for commercial purposes
-- publish online
+This repository and its contents (including all scripts, code, and
+documentation) are the exclusive property of Anna Burova.
+
+Permission is hereby granted to view the code within this repository for
+educational, evaluation, or recruitment purposes only.
+
+Strictly prohibited without prior written permission from Anna Burova:
+- Copying, modifying, or creating derivative works of this software.
+- Distributing, publishing online, or sharing this software with third
+parties.
+- Using this software for any commercial or personal production purposes.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
 # -----------------------------------------------------------------------------
 
