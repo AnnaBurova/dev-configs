@@ -7,7 +7,7 @@
   // Sets the colors used within the text area.
   // The value "auto" will switch between the "light_color_scheme" and
   // "dark_color_scheme" based on the operating system appearance.
-  "color_scheme": "Packages/Color Scheme - Default/Sunburst.tmTheme",
+  "color_scheme": "Mariana.sublime-color-scheme",
 
   // Controls the "color_scheme" when set to "auto"
   "light_color_scheme": "Breakers.sublime-color-scheme",
@@ -71,7 +71,7 @@
   "fold_buttons": true,
 
   // Hides the fold buttons unless the mouse is over the gutter
-  "fade_fold_buttons": false,
+  "fade_fold_buttons": true,
 
   // The style of code folding to use
   // - "auto": Use whatever the default is for the syntax in use
@@ -88,7 +88,7 @@
   // Columns in which to display vertical rulers. Each entry may also be a
   // list of the column, the ruler style and optionally the ruler width, for
   // example: [[80, "solid", 2], 78, [90, "dotted"]]
-  "rulers": [80, 100, 120],
+  "rulers": [],
 
   // Controls how ruler lines are drawn
   // - "dotted": Drawn as a dotted line
@@ -103,10 +103,10 @@
   "spell_check": false,
 
   // The number of spaces a tab is considered equal to
-  "tab_size": 2,
+  "tab_size": 4,
 
   // Set to true to insert spaces when tab is pressed
-  "translate_tabs_to_spaces": true,
+  "translate_tabs_to_spaces": false,
 
   // If translate_tabs_to_spaces is true, use_tab_stops will make tab and
   // backspace and delete insert/delete up to the next tabstop
@@ -133,7 +133,7 @@
   // Disables horizontal scrolling if enabled.
   // May be set to true, false, or "auto", where it will be disabled for
   // source code, and otherwise enabled.
-  "word_wrap": true,
+  "word_wrap": "auto",
 
   // Set to a value other than 0 to force wrapping at that column rather than
   // the window width. See "wrap_width_style" for extra options.
@@ -167,17 +167,17 @@
   // Set to true to draw a border around the visible rectangle on the minimap.
   // The color of the border will be determined by the "minimap_border" key
   // in the color scheme
-  "draw_minimap_border": true,
+  "draw_minimap_border": false,
 
   // Always visualise the viewport on the minimap, as opposed to only
   // showing it on mouse over
-  "always_show_minimap_viewport": true,
+  "always_show_minimap_viewport": false,
 
   // Whether the minimap should scroll horizontally to match the viewport.
   "minimap_horizontal_scrolling": false,
 
   // If enabled, will highlight any line with a caret
-  "highlight_line": true,
+  "highlight_line": false,
 
   // If enabled, will highlight the gutter for any line with a caret
   "highlight_gutter": true,
@@ -298,7 +298,7 @@
   // - ["all", "selection_none"]:
   //     Inverse of the default. Draw white space everywhere except under the
   //     selection.
-  "draw_white_space": ["all"],
+  "draw_white_space": ["selection"],
 
   // Controls how non-ascii white space is drawn.
   // - "none": Draw unicode white space verbatim, eg. hiding zero-width
@@ -350,24 +350,24 @@
   //                   certain desktop environments that frequently make the
   //                   application lose focus this avoids the caret jumping
   //                   around a lot.
-  "trim_trailing_white_space_on_save": "all",
+  "trim_trailing_white_space_on_save": "none",
 
   // Only trim white space on save for the parts of a file that have been
   // modified by you. If there is trailing white space in other parts of the
   // file they are left alone.
-  "trim_only_modified_white_space": false,
+  "trim_only_modified_white_space": true,
 
   // Set to true to ensure the last line of the file ends in a newline
   // character when saving
-  "ensure_newline_at_eof_on_save": true,
+  "ensure_newline_at_eof_on_save": false,
 
   // Set to true to automatically save files when switching to a different file
   // or application
-  "save_on_focus_lost": true,
+  "save_on_focus_lost": false,
 
   // The encoding to use when the encoding can't be determined automatically.
   // ASCII, UTF-8 and UTF-16 encodings will be automatically detected.
-  "fallback_encoding": "UTF-8",
+  "fallback_encoding": "Western (Windows 1252)",
 
   // Encoding used when saving new files, and files opened with an undefined
   // encoding (e.g., plain ascii files). If a file is opened with a specific
@@ -382,7 +382,7 @@
   // Determines what character(s) are used to terminate each line in new files.
   // Valid values are 'system' (whatever the OS uses), 'windows' (CRLF) and
   // 'unix' (LF only).
-  "default_line_ending": "unix",
+  "default_line_ending": "system",
 
   // When enabled, hovering over a word will show a popup listing all
   // possible locations for the definition symbol. Requires index_files.
@@ -392,7 +392,7 @@
   // When disabled, tab will only trigger snippets or insert a tab.
   // Shift+tab can be used to insert an explicit tab when tab_completion is
   // enabled.
-  "tab_completion": false,
+  "tab_completion": true,
 
   // Enable auto complete to be triggered automatically when typing.
   "auto_complete": true,
@@ -587,6 +587,11 @@
   "light_theme": "Default.sublime-theme",
   "dark_theme": "Default Dark.sublime-theme",
 
+  // The file icon theme controls which icons are used for files in the
+  // side-bar. This can either be a single or multiple file icon themes.
+  // Sublime Text does not come with any file icon themes.
+  "file_icon_theme": [],
+
   // Adaptive theme only: controls if a custom or default title bar is used.
   // Note that on Windows, the hamburger menu is used whenever this is
   // enabled and the adaptive theme is in use.
@@ -615,7 +620,7 @@
   "animation_enabled": true,
 
   // Makes tabs with modified files more visible
-  "highlight_modified_tabs": true,
+  "highlight_modified_tabs": false,
 
   // Hides the tab close button when false
   "show_tab_close_buttons": true,
@@ -624,7 +629,7 @@
   "show_tab_close_buttons_on_left": false,
 
   // Show folders in the sidebar in bold
-  "bold_folder_labels": true,
+  "bold_folder_labels": false,
 
   // Draw divider lines between sections of the UI when using the Adaptive theme
   "adaptive_dividers": false,
@@ -636,6 +641,14 @@
   // contains an entire project, thus allowing multiple projects in a single
   // window. Valid values are "system", "preferred" and "disabled".
   "native_tabs": "system",
+
+  // Mac only. Controls whether clicks on a non-focused windows are passed
+  // through to the window.
+  // - "always" will click-through on all elements.
+  // - "never" will never click-through. Clicking will only focus the window.
+  // - "native" follows platform conventions, buttons are clicked-through
+  //   but text selection isn't.
+  "click_through": "always",
 
   // Whether new tabs should favor opening after the current tab or at the end
   // of the list of tabs.
@@ -665,10 +678,10 @@
   "show_git_status_in_status_bar": true,
 
   // Display file encoding in the status bar
-  "show_encoding": true,
+  "show_encoding": false,
 
   // Display line endings in the status bar
-  "show_line_endings": true,
+  "show_line_endings": false,
 
   // Display indentation in the status bar
   "show_indentation": true,
@@ -714,7 +727,7 @@
   //                   to exit, not when the last window is closed. This
   //                   setting is only used on Windows and Linux.
   // - "disabled": Disable hot exit.
-  "hot_exit": "disabled",
+  "hot_exit": "always",
 
   // Closing projects with hot_exit_projects enabled will cause it to close
   // immediately without prompting. Unsaved modifications and open files will
@@ -831,6 +844,15 @@
   // integrations.
   "sublime_merge_path": "",
 
+  // Shell command used to open a terminal emulator at a specified location.
+  // If left empty Sublime Text will attempt to open the default terminal
+  // emulator. The associated menu items can be disabled by setting this to
+  // null.
+  // Examples:
+  // - "git-bash.exe --cd=\"$dir\""
+  // - "alacritty --working-directory \"$dir\""
+  "terminal_command": "",
+
   // Preview file contents when clicking on a file in the sidebar. Double
   // clicking or editing the preview will open the file and assign it a tab.
   // - true: Always preview on click, including right click
@@ -908,7 +930,16 @@
   // the current line. Useful in conjunction with Vintage.
   "relative_line_numbers": false,
 
+  // Set the number of threads to use for background file operations.
+  // Increasing this can result in faster folder loading when using networked
+  // filesystems like NFS and SSHFS. The default and minimum is 2. This
+  // requires a restart to take effect.
+  "io_workers": 2,
+
+  // Determines whether the old 3.3 plugin host is enabled or not.
+  "disable_plugin_host_3.3": true,
+
   // List any packages to ignore here. When removing entries from this list,
   // a restart may be required if the package contains plugins.
-  "ignored_packages": ["Package Control", "Vintage"]
+  "ignored_packages": ["Vintage"]
 }
