@@ -1,3 +1,9 @@
+"""
+Author: NewtCode Anna Burova
+Created: 2024-06
+Updated: 2026-11
+"""
+
 # This optional module makes the package runnable with
 # python -m package_name
 # Remove it if the package does not need a command-line entry point.

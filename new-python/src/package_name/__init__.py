@@ -1,3 +1,9 @@
+"""
+Author: NewtCode Anna Burova
+Created: 2024-06
+Updated: 2026-11
+"""
+
 # ===== Imports from modules ========================================== ======= =================== ====================
 
 # Re-export the most useful functions so callers can import them directly:
