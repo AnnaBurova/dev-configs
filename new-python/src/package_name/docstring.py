@@ -1,8 +1,7 @@
 """
-Updated on YYYY-MM
-Created on YYYY-MM
-
-@author: NewtCode Anna Burova
+Author: NewtCode Anna Burova
+Created: 2024-06
+Updated: 2026-11
 
 Constants:
     CONSTANT_NAME (type)
@@ -12,17 +11,43 @@ Functions:
         param1: type,
         param2: type = "default",
         ) -> return_type
+
+Functions:
+    def count_words(
+        text: str,
+        ) -> int
     def docstring_example(
         param1: int,
         param2: str = "default",
-        ) -> None
-        ) -> bool
-        ) -> int
-        ) -> str
+        # ) -> None
+        # ) -> bool
+        # ) -> int
+        # ) -> str
         ) -> tuple[int, str]
 """
 
 from __future__ import annotations
+
+
+def count_words(
+        text: str,
+        ) -> int:
+    """ ## Count whitespace-separated words in a string.
+
+    This intentionally small example demonstrates a type-annotated function and a docstring.
+    More advanced parsing rules can be added when needed.
+
+    Args:
+        text (str):
+            Text to count.
+            An empty string contains zero words.
+
+    Returns:
+        out (int):
+            The number of whitespace-separated words.
+    """
+
+    return len(text.split())
 
 
 def docstring_example(
