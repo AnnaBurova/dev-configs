@@ -42,7 +42,7 @@
   "chat.editor.fontSize": 12,
 
   // Rendered text in Markdown Preview.
-  "markdown.preview.fontSize": 12,
+  "markdown.preview.fontSize": 8,
 
   // ----- Overrides colors from the currently selected color theme --- ------- ------------------- --------------------
 
@@ -98,13 +98,13 @@
   //            Horizontal scrolling is still used when the tabs can no longer shrink enough.
   "workbench.editor.tabSizing": "fit",
 
-  // Controls the maximum width of tabs in pixels.
-  //   Note: Used only with "workbench.editor.tabSizing": "fixed".
-  // "workbench.editor.tabSizingFixedMaxWidth": 160,
-
   // Controls the minimum width of tabs in pixels.
   //   Note: Used only with "workbench.editor.tabSizing": "fixed".
-  // "workbench.editor.tabSizingFixedMinWidth": 160,
+  // "workbench.editor.tabSizingFixedMinWidth": 140,
+
+  // Controls the maximum width of tabs in pixels.
+  //   Note: Used only with "workbench.editor.tabSizing": "fixed".
+  // "workbench.editor.tabSizingFixedMaxWidth": 200,
 
   // ----- Minimap viewport settings for navigation in long files ----- ------- ------------------- --------------------
 
@@ -185,7 +185,7 @@
   // false = Disable Sticky Scroll.
   "editor.stickyScroll.enabled": true,
 
-  // Defines the model to use for determining which lines to stick.
+  // Defines the model to use or determining which lines to stick.
   //   If the outline model does not exist, it will fall back on the folding provider model,
   //   which falls back on the indentation model.
   //   This order is respected in all three cases.
@@ -430,6 +430,7 @@
   //   to be used by the terminal on Windows.
   "terminal.integrated.env.windows": {
     "PYTHONIOENCODING": "utf-8",
+    // "CHCP": "65001"
   },
 
   // Controls whether the terminal will leverage the GPU to do its rendering.
@@ -476,7 +477,7 @@
 
   // The default terminal profile on Windows.
   // null                        = Automatically detect the default (Default)
-  // "PowerShell"                = C:\Users\User\AppData\Local\Microsoft\WindowsApps
+  // "PowerShell"                = C:\Users\USER_NAME\AppData\Local\Microsoft\WindowsApps
   //                               \Microsoft.PowerShell_8wekyb3d8bbwe\pwsh.exe
   // "Windows PowerShell"        = C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
   // "Git Bash"                  = C:\Program Files\Git\bin\bash.exe
@@ -500,6 +501,16 @@
   //                          or when the window is closed.
   // "never"                = Never restore the terminal buffers or recreate the process.
   "terminal.integrated.persistentSessionReviveProcess": "never",
+
+  // ===== EXTENSION SETTINGS ========================================= ======= =================== ====================
+
+  // ----- AI and Copilot features ------------------------------------ ------- ------------------- --------------------
+
+  // Disable VS Code built-in AI and Copilot features, including chat and inline suggestions.
+  //   third-party AI extensions may still work independently.
+  // true  = Disable and hide built-in AI features provided by GitHub Copilot.
+  // false = Enable VS Code built-in AI features. (Default)
+  "chat.disableAIFeatures": true,
 
   // ----- Python type checking and auto-import completions ----------- ------- ------------------- --------------------
 
@@ -529,8 +540,6 @@
   // true  = Show completions for symbols that can be imported automatically.
   // false = Show completions only for symbols already imported or defined in scope. (Default)
   "python.analysis.autoImportCompletions": true,
-
-  // ===== EXTENSION SETTINGS ========================================= ======= =================== ====================
 
   // ----- Gremlins: highlights invisible and suspicious Unicode characters --- ------------------- --------------------
 
@@ -613,16 +622,16 @@
     // do not report them as problems
     //  ’  “  ”  –
 
-    "2019": { "level": "none", "description": "Right single quotation mark" },
-    "201c": { "level": "none", "description": "Left double quotation mark" },
-    "201d": { "level": "none", "description": "Right double quotation mark" },
-    "2013": { "level": "none", "description": "En dash" },
+    // "2019": { "level": "none", "description": "Right single quotation mark" },
+    // "201c": { "level": "none", "description": "Left double quotation mark" },
+    // "201d": { "level": "none", "description": "Right double quotation mark" },
+    // "2013": { "level": "none", "description": "En dash" },
 
     // Allowed typography characters: report them as problems
-    // "2019": { "level": "warning", "description": "Right single quotation mark" },
-    // "201c": { "level": "warning", "description": "Left double quotation mark" },
-    // "201d": { "level": "warning", "description": "Right double quotation mark" },
-    // "2013": { "level": "warning", "description": "En dash" },
+    "2019": { "level": "warning", "description": "Right single quotation mark" },
+    "201c": { "level": "warning", "description": "Left double quotation mark" },
+    "201d": { "level": "warning", "description": "Right double quotation mark" },
+    "2013": { "level": "warning", "description": "En dash" },
 
     // ----- Individual characters ------------------------------------ ------- --------------------
 
@@ -653,7 +662,7 @@
     // ----- Unicode ranges ------------------------------------------- ------- --------------------
 
     "0400-04ff": { "level": "warning", "description": "Cyrillic" },
-    // "0080-00ff": { "level": "warning", "description": "Latin-1 Supplement" },  // exclude 00ad
+    // "0080-00ff": { "level": "warning", "description": "Latin-1 Supplement" },  // leave OFF: exclude 00ad "  ­  "
     "0080-00ac": { "level": "warning", "description": "Latin-1 Supplement" },
     "00ae-00ff": { "level": "warning", "description": "Latin-1 Supplement" },
     "0300-036f": { "level": "warning", "description": "Combining diacritical marks" },
@@ -673,15 +682,23 @@
 
   },
 
-  // ----- AI and Copilot features ------------------------------------ ------- ------------------- --------------------
+  // ----- Rainbow CSV ------------------------------------------------ ------- ------------------- --------------------
 
-  // Disable VS Code built-in AI and Copilot features, including chat and inline suggestions.
-  //   third-party AI extensions may still work independently.
-  // true  = Disable and hide built-in AI features provided by GitHub Copilot.
-  // false = Enable VS Code built-in AI features. (Default)
-  "chat.disableAIFeatures": true,
+  "rainbow_csv.autodetect_separators": [
+    ";",
+    ",",
+  ],
 
   // ===== PROJECT SPECIFICS ========================================== ======= =================== ====================
+
+  // Object with environment variables that will be added to the VS Code process to be used by the terminal on Linux.
+  // Set to null to delete the environment variable.
+  "terminal.integrated.env.linux": {
+    "VENV": "/mnt/d/VS_Code/.venvWSL314/bin/activate",
+  },
+  // Example call:
+  // echo "$VENV"
+  // source "$VENV"
 
   // Controls whether entries in .gitignore should be parsed and excluded from the Explorer.
   // true  = Hide Git-ignored files and folders in the Explorer.
@@ -693,12 +710,22 @@
   // true  = Hide matching files or folders.
   // false = Show matching files or folders.
   "files.exclude": {
-    "**/.git": false,  // DEFAULT true
+    // "**/.git": false,  // DEFAULT true
+    "**/.svn": false,  // DEFAULT true
     "**/.hg": false,  // DEFAULT true
     "**/.jj": false,  // DEFAULT true
-    "**/.svn": false,  // DEFAULT true
     "**/.DS_Store": false,  // DEFAULT true
     "**/Thumbs.db": false,  // DEFAULT true
+
+    "**/node_modules": false,  // TODO change if found
+
+    // My folders to hide:
+    ".venv311/": true,
+    ".venv312/": true,
+    ".venv313/": true,
+    ".venv314/": true,
+    ".venv315/": true,
+    ".venvWSL314/": true,
   },
 
   // Configure glob patterns for excluding files and folders in fulltext searches
@@ -712,10 +739,13 @@
     "**/node_modules": false,  // DEFAULT true
     "**/bower_components": false,  // DEFAULT true
     "**/*.code-search": false,  // DEFAULT true
+
+    // My folders to hide:
   },
 
   // Additional import search resolution paths
   "python.analysis.extraPaths": [
+    "./dev-newtutils/src",
   ],
 
   // Paths of directories or files that should not be included.
@@ -727,7 +757,28 @@
   //   *  - a sequence of zero or more characters or
   //   ?  - a single character.
   "python.analysis.exclude": [
+    // Exclude virtual environment directories at the workspace root.
+    "./.venv311",
+    "./.venv312",
+    "./.venv313",
+    "./.venv314",
+    "./.venv315",
+    "./.venvWSL314",
+
+    // Generated result folders
   ],
+
+  // ----- Markdown All in One ---------------------------------------- ------- ------------------- --------------------
+
+  // Theme of the exported HTML. Only affects code blocks.
+  // "light" =  (Default)
+  // "dark"
+  "markdown.extension.print.theme": "dark",
+
+  // Auto show preview to side.
+  // true  = Automatically show the Markdown preview to the side when opening a Markdown file.
+  // false = Do not automatically show the Markdown preview. (Default)
+  "markdown.extension.preview.autoShowPreviewToSide": true,
 
   // ===== OVERRIDES ================================================== ======= =================== ====================
 
@@ -735,26 +786,33 @@
     "editor.tabSize": 2,
   },
 
+  "[csv]": {
+    // Use UTF-8 with BOM so Cyrillic text is detected correctly by Excel.
+    // "files.encoding": "utf8bom",
+  },
+
   "[powershell]": {
     "gremlins.characters": {
       //  `
-      "0060": { "level": "none", "description": "Grave accent" },
+      // "0060": { "level": "none", "description": "Grave accent" },
     },
+    // Chocolatey .ps1 scripts must use UTF-8 with BOM for Windows PowerShell 5.1.
+    // "files.encoding": "utf8bom",
   },
 
   "[markdown]": {
     // Markdown hard line breaks use two or more trailing spaces.
-    "files.trimTrailingWhitespace": false,
-    "editor.trimAutoWhitespace": false,
+    // "files.trimTrailingWhitespace": false,
+    // "editor.trimAutoWhitespace": false,
     "gremlins.characters": {
       //  `
-      "0060": { "level": "none", "description": "Grave accent" },
+      // "0060": { "level": "none", "description": "Grave accent" },
     },
   },
 
   "[plaintext]": {
-    "files.trimTrailingWhitespace": false,
-    "editor.trimAutoWhitespace": false,
+    // "files.trimTrailingWhitespace": false,
+    // "editor.trimAutoWhitespace": false,
   },
 
   // ===== END ======================================================== ======= =================== ====================
