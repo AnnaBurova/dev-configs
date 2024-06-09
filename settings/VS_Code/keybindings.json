@@ -1,8 +1,48 @@
 // Place your key bindings in this file to override the defaults
-// C:\Users\User\AppData\Roaming\Code\User\keybindings.json
+// C:\Users\USER_NAME\AppData\Roaming\Code\User\keybindings.json
+// Shift + Alt + F2 = Opens this file
 [
   {
+    "key": "shift+alt+f2",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+  {
     "key": "f9",
-    "command": "editor.action.sortLinesAscending",
+    "command": "-editor.debug.action.toggleBreakpoint",
+    "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
+  },
+  {
+    "key": "f9",
+    "command": "editor.action.sortLinesAscending"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!isSessionsWindow && !terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "-workbench.action.terminal.copySelection",
+    "when": "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "-workbench.action.browser.addElementToChat",
+    "when": "browserHasUrl && chatIsEnabled && !browserHasError && activeEditor == 'workbench.editor.browser'"
+  },
+  {
+    "key": "ctrl+k ctrl+c",
+    "command": "-editor.action.addCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+/",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]
