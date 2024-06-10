@@ -6,7 +6,7 @@
 
   // Adjust the default zoom level for all windows.
   //   Each increment above 0 (1) or below (-1) represents zooming 20% larger or smaller.
-  //   You can also enter decimals to adjust the zoom level with a finer granularity.
+  //   Decimals can also be entered to adjust the zoom level with finer granularity.
   // -8   = 20% (Minimum)
   // -5   = 50%
   // -1   = 80%
@@ -68,7 +68,7 @@
   // Controls whether editors showing a file that was opened during the session
   //   should close automatically when getting deleted or renamed by some other process.
   //   Note: Deleting from within the application will always close the editor
-  //   and that editors with unsaved changes will never close to preserve your data.
+  //   and that editors with unsaved changes will never close, preserving the data.
   // true  = Close the tab when the file is deleted or renamed externally.
   // false = Keep the tab open, mark it as deleted, and allow saving it to restore. (Default)
   "workbench.editor.closeOnFileDelete": true,
@@ -393,7 +393,7 @@
 
   // ----- Paste behavior and clipboard processing -------------------- ------- ------------------- --------------------
 
-  // Controls whether you can paste content in different ways.
+  // Controls whether content can be pasted in different ways.
   // true  = Enable Paste As processing. (Default)
   // false = Paste text directly without waiting for Paste As providers.
   "editor.pasteAs.enabled": false,
