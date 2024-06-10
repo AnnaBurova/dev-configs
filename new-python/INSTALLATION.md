@@ -78,7 +78,7 @@ and its source code does not need to be edited.
 ```sh
 # Activate Virtual Environment
 
-# Navigate to the project directory
+# Navigate to the project directory:
 cd ./dev-configs/new-python/
 
 # Install dependencies first (if requirements.txt exists)
@@ -93,17 +93,11 @@ python -m pip install .
 ### Editable Local Installation (Recommended for Development)
 
 To update all configured development virtual environments
-and install the test dependencies from the test group,
+and install the optional `test` dependencies defined in `pyproject.toml`,
 use the PowerShell helper script:
 
-```sh
-# Activate Virtual Environment
-
-# Navigate to the project directory
-cd ./dev-configs/new-python/
-```
 ```pwsh
-& '.\tests\_update_venv.ps1'
+& '.\dev-configs\new-python\tests\_update_venv.ps1'
 ```
 
 Recommended when the project is intended to be used and tested.
@@ -122,7 +116,7 @@ instead of copying its files into the environment.
 ```sh
 # Activate Virtual Environment
 
-# Navigate to the project directory
+# Navigate to the project directory:
 cd ./dev-configs/new-python/
 
 # Install dependencies first (if requirements.txt exists)
