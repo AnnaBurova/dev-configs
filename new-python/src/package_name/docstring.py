@@ -110,9 +110,21 @@ def docstring_example(
             If no valid selection is made after 5 attempts.
             If directories do not match.
             If an error occurs and `stop=True`.
-            Always exits with code 1.
+            Terminates with code 1.
         ValueError:
             If `param1` is less than zero or `param2` is empty.
+
+    Examples:
+        ```python
+        Newt.function({3, 1, 2})
+        # Output: '{1, 2, 3}'
+
+        Newt.function(["hello"])
+        # Output: '["hello"]'
+
+        Newt.function(42)
+        # Output: '42'
+        ```
     """
 
     # TODO: Implement the function logic here
