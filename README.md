@@ -15,6 +15,7 @@ making repositories clean, predictable, and easy to maintain.
 |------|----------|
 | `.gitignore` | Specifies files and directories that should not be tracked by Git. |
 | `.gitattributes` | Ensures consistent text normalization (LF endings), defines diff rules, and marks binary files. |
+| `scripts/check_gitattributes.sh` | Bash script that verifies `.gitattributes` consistency across all tracked files. |
 | `settings/.editorconfig` | Defines indentation, line endings, and encoding rules for all file types to maintain consistent formatting in editors. |
 | `settings/Sublime_Text/Preferences.sublime-settings` | Sublime Text editor preferences, e.g., tabs vs spaces, font size, line endings, and other editor behaviors. |
 | `settings/VS_Code/settings.json` | VS Code editor settings, such as formatting rules, extensions configuration, and editor behavior. |

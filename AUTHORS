@@ -1,3 +1,16 @@
 # Repository authors
 
 Anna Burova <burova.anna+work@gmail.com>
+
+## ⚙️ Scripts & Tools
+
+| *bash* | Check Gitattributes |
+|-----|-----|
+| **File** | `./scripts/check_gitattributes.sh` |
+| **Original Author** | [gitattributes/gitattributes](https://github.com/gitattributes/gitattributes/) |
+| **License** | MIT |
+| **Notes** | Based on the version available as of **2023-12-11** |
+
+This repository includes contributions from the above author(s) and third-party tools/scripts.
+
+Please respect the original licenses when using or redistributing these files.
