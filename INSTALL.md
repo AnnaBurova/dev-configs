@@ -28,6 +28,15 @@ Run with `--help` for the available options.
 
 Requires Git and Bash.
 
+🔄 **File Normalization**:
+
+```bash
+# Re-apply .gitattributes rules to specific file
+git add --renormalize <filename>
+# Re-apply .gitattributes rules to all files
+git add --renormalize .
+```
+
 ---
 
 ## `./scripts/copy_files.py` - Copy Files to Multiple Folders
