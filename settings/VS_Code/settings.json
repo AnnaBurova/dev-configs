@@ -43,6 +43,7 @@
     "editor.tabSize": 4
   },
   "[markdown]": {
+    "files.trimTrailingWhitespace": false,
     "editor.trimAutoWhitespace": false
   },
 
@@ -56,6 +57,11 @@
     "**/node_modules": true,
     "**/__pycache__": true
   },
+
+  "python.analysis.extraPaths": [
+    "D:/VS_Code/dev-newtutils"
+  ],
+  "python.defaultInterpreterPath": "C:/ProgramData/anaconda3/python.exe",
 
   // "CodeGPT.apiKey": "CodeGPT Plus Beta",
   // Optional: set your CodeGPT API key in local settings.json (not committed)
