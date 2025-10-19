@@ -7,7 +7,6 @@ Created on 2025-10
 import sys
 import os
 import shutil
-from typing import List
 
 dir_ = os.path.dirname(os.path.realpath(__file__))
 
@@ -21,31 +20,39 @@ sys.exit()
 
 
 def copy_file_to_folders(
-        file_paths: List[str],
-        destination_folders: List[str]
+        file_paths: list[str],
+        destination_folders: list[str]
         ) -> None:
     """
     Copy a list of files into multiple destination folders.
 
     Args:
-        file_paths (List[str]): A list of file paths to copy.
-        destination_folders (List[str]): A list of destination folders.
+        file_paths (list[str]): A list of file paths to copy.
+        destination_folders (list[str]): A list of destination folders.
 
     This function attempts to copy each file from `file_paths`
     into every folder in `destination_folders`. It reports:
       - folders that were missing,
       - folders where copying failed.
     """
+    missing_folders: list[str] = []
+    failed_folders: list[str] = []
 
-    missing_folders = []
-    failed_folders = []
+    # Filter out files that do not exist to avoid repeated errors
+    existing_files = [f for f in file_paths if os.path.isfile(f)]
+    missing_files = [f for f in file_paths if not os.path.isfile(f)]
+
+    if missing_files:
+        print("The following files do not exist and will be skipped:")
+        for file_ in missing_files:
+            print(f" - {file_}")
 
     for folder_ in destination_folders:
         if not os.path.exists(folder_):
             missing_folders.append(folder_)
             continue
 
-        for file_ in file_paths:
+        for file_ in existing_files:
             try:
                 shutil.copy(file_, folder_)
 
@@ -81,11 +88,11 @@ file_paths = [
     os.path.join(dir_, "dev-configs", "new-repo", "LICENSE"),
     os.path.join(dir_, "dev-configs", "new-repo", "README.md"),
     os.path.join(dir_, "dev-configs", "new-repo", "TODO"),
-    ]
+]
 
 destination_folders = [
     os.path.join(dir_, "dev-newtutils"),
     os.path.join(dir_, "dev-tools"),
-    ]
+]
 
 copy_file_to_folders(file_paths, destination_folders)
