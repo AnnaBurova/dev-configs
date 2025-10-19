@@ -4,7 +4,10 @@ Created on 2025-10
 @author: NewtCode Anna Burova
 """
 
-def my_function(param1: int, param2: str) -> bool:
+def my_function(
+        param1: int,
+        param2: str
+        ) -> bool:
     """
     Short description of what the function does.
 
@@ -20,4 +23,5 @@ def my_function(param1: int, param2: str) -> bool:
     Raises:
         ValueError: Description of conditions under which this error is raised.
     """
+
     return True
