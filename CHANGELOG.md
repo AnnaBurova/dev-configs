@@ -11,7 +11,7 @@ This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PA
 
 ### ✨ Added
 
-- Added default templates: `INSTALL.md` and `CHANGELOG.md`.
+- Added default templates: `README.md`, `INSTALL.md` and `CHANGELOG.md`.
 - Introduced reusable installation guide structure for new projects.
 
 ### 🔧 Changed
