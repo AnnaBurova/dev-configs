@@ -126,13 +126,17 @@ git rebase -i HEAD~5
 
 ```bash
 git tag                               # List all local tags
+git tag -n                            # List all local tags with annotation
+git ls-remote --tags origin           # List all remote tags
+
 git tag v1.0.0                        # Create lightweight tag
 git tag -a v1.0.0 -m "First release"  # Create annotated tag (recommended)
 git tag -a v1.0.0 332902e -m "v1.0.0 — First release"  # Tag specific commit
+
 git tag -d v1.0.0                     # Delete local tag
 git show v1.0.0                       # Show tag details
 git push --tags                       # Push all tags to remote
+git push origin --force --tags
 git fetch --tags                      # Fetch all tags from remote
-git ls-remote --tags origin           # List all remote tags
 git checkout v1.0.0                   # Checkout to tagged version
 ```
