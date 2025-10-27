@@ -30,7 +30,7 @@
     "other": "off"
   },
 
-  // Global defaults – apply to every file
+  // Global defaults - apply to every file
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.trimAutoWhitespace": true,
@@ -48,6 +48,11 @@
   },
 
   "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.env.windows": {
+    "PYTHONIOENCODING": "utf-8",
+    "CHCP": "65001"
+  },
+
   "git.ignoreLimitWarning": true,
   "accessibility.underlineLinks": true,
   "python.analysis.typeCheckingMode": "basic",
@@ -62,6 +67,8 @@
     "D:/VS_Code/dev-newtutils"
   ],
   "python.defaultInterpreterPath": "C:/ProgramData/anaconda3/python.exe",
+
+  "gremlins.showInProblemPane" : true,
 
   // "CodeGPT.apiKey": "CodeGPT Plus Beta",
   // Optional: set your CodeGPT API key in local settings.json (not committed)
