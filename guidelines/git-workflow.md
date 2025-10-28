@@ -1,6 +1,6 @@
-# 🧭 Git Commands Mini-Guide
+# 🐍 NewtCode Git Commands Guide
 
-## 📦 Basic Commands
+## Basic Commands
 
 ```bash
 git add <filename>       # Add specific file to staging
@@ -11,7 +11,7 @@ git diff --summary       # Summary of changed files only
 git reset                # Unstage all files (remove from staging area)
 ```
 
-## 🕒 Commit Date Management
+## Commit Date Management
 
 ```bash
 git commit --date="2025-04-10 14:00:00" -m "Message"                # Set a custom date for the commit
@@ -29,7 +29,7 @@ git commit --amend --no-edit --date="2025-10-22T00:36:00"
 - `"YYYY-MM-DDTHH:MM:SS"` - The letter 'T' is required between date and time
 - `--allow-empty` - allows committing **without any file changes**
 
-## 📜 Log & History
+## Log & History
 
 ```bash
 git log --oneline                                                       # Compact log view
@@ -48,14 +48,14 @@ git log --pretty=format:"%h %s%n  Author date: %ad%n  Commit date: %cd" --date=i
 #   Commit date: 2025-10-15 11:48:35 +0300
 ```
 
-## 🔄 File Normalization
+## File Normalization
 
 ```bash
 git add --renormalize <filename>  # Re-apply .gitattributes rules to specific file
 git add --renormalize .           # Re-apply .gitattributes rules to all files
 ```
 
-## 🌿 Branching
+## Branching
 
 ```bash
 git checkout -b feature/new-ui  # Create and switch to a new branch
@@ -66,15 +66,15 @@ git branch -d feature/new-ui    # Delete a branch (after merge)
 
 ### Recommended Branch Prefixes
 
-| Type          | Prefix   | Example              |
+| Type | Prefix | Example |
 | ------------- | -------- | -------------------- |
-| Feature       | `feat/`  | `feat/add-login`     |
-| Bug fix       | `fix/`   | `fix/api-timeout`    |
-| Documentation | `docs/`  | `docs/update-readme` |
-| Maintenance   | `chore/` | `chore/update-deps`  |
-| Tests         | `test/`  | `test/unit-helpers`  |
+| Feature | `feat/` | `feat/add-login` |
+| Bug fix | `fix/` | `fix/api-timeout` |
+| Documentation | `docs/` | `docs/update-readme` |
+| Maintenance | `chore/` | `chore/update-deps` |
+| Tests | `test/` | `test/unit-helpers` |
 
-## 🌍 Remote Management
+## Remote Management
 
 ```bash
 git clone https://github.com/user/repo.git              # Clone a remote repository
@@ -97,18 +97,18 @@ git pull           # Merge changes directly (less clean history)
 git push                        # Push the current branch
 git push origin feature/new-ui  # Push a specific branch
 git push --force-with-lease     # Force push (wont overwrite teammates work)
-git push --force               # Force push (overwrite teammates work)
+git push --force                # Force push (overwrite teammates work)
 ```
 
-- When you push with `--force`,
-  Git replaces the branch on the remote server with your local branch — no matter what’s there.
-- When you push with `--force-with-lease`,
-  Git first checks whether the remote branch still points to the same commit you last fetched
+- When you push with `--force`,  
+  Git replaces the branch on the remote server with your local branch — no matter what's there.
+- When you push with `--force-with-lease`,  
+  Git first checks whether the remote branch still points to the same commit you last fetched  
   (the one your local copy is based on).
   - If no one else has pushed, your push proceeds (safe).
   - If someone else pushed new commits, Git refuses to push and warns you.
 
-## 🔧 Rebasing & History Cleanup
+## Rebasing & History Cleanup
 
 ```bash
 # Rebase your branch with main (update history cleanly)
@@ -122,7 +122,7 @@ git rebase -i HEAD~5
 - Combine, edit, or delete commits before merging
 - Keep your history clean and readable
 
-## 🧩 Tags and Releases
+## Tags and Releases
 
 ```bash
 git tag                               # List all local tags
