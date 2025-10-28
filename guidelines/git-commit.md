@@ -1,12 +1,12 @@
-# Commit Guidelines
+# 🐍 NewtCode Commit Message Guide
 
-This document explains how to write clear and consistent commit messages
-following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
-Using these guidelines will make your repository easier to read, understand, and maintain.
+This document defines how to write clear, consistent, and meaningful commit messages  
+following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.  
+Using these rules helps maintain clean history and improves code traceability.
 
 ## Commit Message Structure
 
-A commit message should have the following structure:
+Each commit message follows this format:
 
 ```
 <type>(<scope>): <short summary>
@@ -14,29 +14,48 @@ A commit message should have the following structure:
 <optional longer description>
 ```
 
-## Commit Types (Conventional Commits)
+## Commit Types
 
-feat(scope): Add new feature
-fix(scope): Fix a bug
-chore(scope): Routine task, config update, maintenance
-docs(scope): Documentation change
-style(scope): Formatting, styling, indentation rules
+| Type | Purpose |
+| ------ | ---------- |
+| **feat** | Add new feature |
+| **fix** | Fix a bug |
+| **refactor** | Code restructure without behavior change |
+| **docs** | Documentation changes only |
+| **test** | New or updated tests |
+| **chore** | Maintenance, tooling, configs, CI updates |
+| **style** | Formatting, naming, whitespace, no logic change |
 
-## Scope examples (optional)
+## Scope Examples
 
-vscode, sublime, git, readme, api
+Use a short, lowercase identifier describing the affected area:
 
-## Summary rules
+```
+core, api, readme, git, sublime, vscode, parser
+```
 
-- Use imperative mood: Add, Fix, Update, Remove
-- Capitalize first word
-- No period at the end
-- Keep it short (~50 chars)
+## Summary Rules
 
-## Examples
+- Use **imperative mood** — «Add», «Fix», «Update», not «Added» or «Fixes».
+- Capitalize the first word.
+- Do **not** end the summary with a period.
+- Keep the summary around **50 characters**.
+- Add an optional body to explain *what* and *why*, not *how*.
 
-feat(vscode): Add settings for auto-format on save
-fix(sublime): Correct tab size configuration
-chore(git): Update .gitignore for node projects
-docs(readme): Add commit message guidelines
-style(vscode): Adjust spacing in settings.json
+## 🧰 Examples
+
+```
+feat(api): add pagination support
+fix(core): handle missing keys during merge
+refactor(parser): simplify token validation logic
+docs(readme): update setup instructions
+chore(git): update .gitignore for build artifacts
+style(vscode): adjust indentation in settings
+test(utility): add sorting validation test cases
+```
+
+## 💡 Notes
+
+- All commit messages must be written in **English**.
+- Avoid vague messages like «fix bug» — be specific about the change.
+  when generating commits automatically through AI tools.
