@@ -1,7 +1,6 @@
 # 🐍 NewtCode Commit Message Guide
 
-This document defines how to write clear, consistent, and meaningful commit messages  
-following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.  
+This document defines how to write clear, consistent, and meaningful commit messages following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
 Using these rules helps maintain clean history and improves code traceability.
 
 ## Commit Message Structure
@@ -17,7 +16,7 @@ Each commit message follows this format:
 ## Commit Types
 
 | Type | Purpose |
-| ------ | ---------- |
+| :-- | :-- |
 | **feat** | Add new feature |
 | **fix** | Fix a bug |
 | **refactor** | Code restructure without behavior change |
@@ -36,10 +35,10 @@ core, api, readme, git, sublime, vscode, parser
 
 ## Summary Rules
 
-- Use **imperative mood** — «Add», «Fix», «Update», not «Added» or «Fixes».
+- Use imperative mood: «Add», «Fix», «Update», not «Added» or «Fixes».
 - Capitalize the first word.
-- Do **not** end the summary with a period.
-- Keep the summary around **50 characters**.
+- Do not end the summary with a period.
+- Keep the summary around 50 characters.
 - Add an optional body to explain *what* and *why*, not *how*.
 
 ## 🧰 Examples
@@ -56,6 +55,6 @@ test(utility): add sorting validation test cases
 
 ## 💡 Notes
 
-- All commit messages must be written in **English**.
+- All commit messages must be written in English.
 - Avoid vague messages like «fix bug» — be specific about the change.
-  when generating commits automatically through AI tools.
+- Pay special attention to clarity when generating commits automatically through AI tools.
