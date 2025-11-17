@@ -1,5 +1,7 @@
 # 🦎 Dev-Config — Chocolate Box by `NewtCode`
 
+[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
+
 A collection of configuration files, templates, and scripts for maintaining consistent
 Git repository structure, formatting, and behavior across all projects.
 
@@ -27,9 +29,20 @@ making repositories clean, predictable, and easy to maintain.
 
 ---
 
+## ⚙️ Requirements
+
+- **Python 3.10+** (tested with Python 3.10, 3.11, 3.12, 3.13)
+- Full type hint support with `from __future__ import annotations`
+
+## 📦 Dependencies
+
+All other modules rely only on the Python Standard Library.
+
+---
+
 ## 🚀 Getting Started
 
-- [Installation Guide](INSTALL.md) — for setup instructions and configurations.
+- [Installation Guide](INSTALL.md) — setup instructions and configuration details.
 
 ---
 
