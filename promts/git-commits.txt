@@ -25,6 +25,7 @@ All commit messages must conform to: https://www.conventionalcommits.org/en/v1.0
     Rules:
     - Exactly one line.
     - English only.
+    - Text must be lowercase.
     - Imperative mood verbs (Add, Fix, Update, Remove, Refactor, Improve, Ensure, Validate, etc.).
     - No quotes, no markdown, no explanations, no additional text.
     - Summary must describe exactly one action.
