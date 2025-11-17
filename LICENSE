@@ -23,8 +23,9 @@ SOFTWARE.
 ================================================================================
 
 This project uses components from the Python standard library,
-licensed under the [Python Software Foundation License (PSF License)](https://docs.python.org/3/license.html):
+licensed under the Python Software Foundation License (PSF License):
+https://docs.python.org/3/license.html
 
-- sys - Python standard library
-- os - Python standard library
-- shutil - Python standard library
+- sys - interpreter and runtime
+- os - file system and environment
+- shutil - directory operations like copying, moving, and deleting
