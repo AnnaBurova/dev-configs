@@ -59,7 +59,7 @@ git add --renormalize .           # Re-apply .gitattributes rules to all files
 
 ```bash
 git checkout -b feature/new-ui  # Create and switch to a new branch
-git checkout master             # Switch to an existing branch
+git checkout main               # Switch to an existing branch
 git merge feature/new-ui        # Merge a branch into the current one
 git branch -d feature/new-ui    # Delete a branch (after merge)
 ```

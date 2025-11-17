@@ -60,7 +60,7 @@ style(scope): Formatting or code style only
 
 Before submitting a PR:
 
-1. Ensure your branch is up to date with `master`.
+1. Ensure your branch is up to date with `main`.
 2. Describe clearly what was changed and why.
 3. Reference related issues or previous discussions.
 4. Ensure that the code passes all tests (see below).
@@ -90,7 +90,7 @@ When adding new functionality:
 
 * All contributions are reviewed before merging.
 * Be open to feedback and suggested revisions.
-* Once approved, the branch will be merged into `master` and the next release prepared.
+* Once approved, the branch will be merged into `main` and the next release prepared.
 
 ---
 
