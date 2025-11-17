@@ -1,6 +1,6 @@
 # 🧾 Changelog — *XXX (NewtCode)*
 
-All notable changes to this project are documented here.
+All notable changes to this project are documented here.  
 This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`).
 
 ---

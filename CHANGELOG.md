@@ -115,13 +115,13 @@ This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PA
 
 ---
 
-## 🏷️ v0.0.1 — Initial Repository Setup
+## 🏷️ v0.0.1 — Initial setup
 
 **Date:** 2024-11-11
 
 ### 🧩 Initial Setup
 
-- Created repository structure (`.gitignore`, `.gitattributes`).
+- Created project structure (`.gitignore`, `.gitattributes`).
 - Initialized the *Dev-Config* project.
 - Prepared the foundation for future modules and documentation.
 
