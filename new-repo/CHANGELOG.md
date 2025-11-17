@@ -27,7 +27,7 @@ This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PA
 
 ## 🏷️ v0.1.0 — Initial setup
 
-**Date:** 2025-XX-XX
+**Date:** 2026-XX-XX
 
 ### 🧩 Initial Setup
 

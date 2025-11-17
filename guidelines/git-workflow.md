@@ -14,13 +14,13 @@ git reset                # Unstage all files (remove from staging area)
 ## Commit Date Management
 
 ```bash
-git commit --date="2025-04-10 14:00:00" -m "Message"                # Set a custom date for the commit
-git commit --allow-empty -m "Message" --date="2025-04-10T18:35:09"  # Empty Commits
-git commit --amend --no-edit --date="2025-05-24T00:39:50"           # Amending the Last Commit
+git commit --date="2026-01-30 14:00:00" -m "Message"                # Set a custom date for the commit
+git commit --allow-empty -m "Message" --date="2026-01-30T14:00:00"  # Empty Commits
+git commit --amend --no-edit --date="2026-01-30T14:00:00"           # Amending the Last Commit
 
-GIT_AUTHOR_DATE="2025-10-22T00:36:00" \
-GIT_COMMITTER_DATE="2025-10-22T00:36:00" \
-git commit --amend --no-edit --date="2025-10-22T00:36:00"
+GIT_AUTHOR_DATE="2026-01-30T14:00:00" \
+GIT_COMMITTER_DATE="2026-01-30T14:00:00" \
+git commit --amend --no-edit --date="2026-01-30T14:00:00"
 ```
 
 - `--amend` - rewrite the **last commit**
@@ -39,13 +39,13 @@ git log --pretty=format:"%h %ad | %an | %s" --date=short > history.txt  # Detail
 git log --pretty=format:"%h%nAuthor: %an%nDate: %ad%nMessage: %s%n" --date=iso
 # 332902e
 # Author: Anna Burova
-# Date: 2025-10-21 12:40:13 +0300
+# Date: 2026-01-30 14:00:00 +0300
 # Message: chore(version): bump project version to 0.1.4
 
 git log --pretty=format:"%h %s%n  Author date: %ad%n  Commit date: %cd" --date=iso
 # 160dab8 Initial commit
-#   Author date: 2025-10-15 11:48:35 +0300
-#   Commit date: 2025-10-15 11:48:35 +0300
+#   Author date: 2026-01-30 14:00:00 +0300
+#   Commit date: 2026-01-30 14:00:00 +0300
 ```
 
 ## File Normalization

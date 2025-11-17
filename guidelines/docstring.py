@@ -1,6 +1,6 @@
 """
-Updated on 2025-11
-Created on 2025-10
+Updated on YYYY-MM
+Created on YYYY-MM
 
 @author: NewtCode Anna Burova
 """
