@@ -44,6 +44,9 @@ https://docs.python.org/3/license.html
 
 - sys - interpreter and runtime
 - os - file system and environment
+- re - regular expression matching operations
+- shutil - directory operations like copying, moving, and deleting
+
 - time - timing and sleep utilities
 - datetime - date and time objects
 
@@ -55,7 +58,6 @@ https://docs.python.org/3/license.html
 
 - csv - CSV parsing and writing
 - json - JSON serialization
-- shutil - directory operations like copying, moving, and deleting
 - winsound - playing sounds and beeps (Windows-only module)
 
 - sqlite3 - included with Python under the PSF License;
@@ -71,37 +73,42 @@ This project uses the following third-party libraries:
   Copyright (c) 2025-2026 Anna Burova
   https://github.com/AnnaBurova/dev-newtutils
 
-- Pillow (HPND License)
-  Copyright (c) 1997-2026 Jeffrey Alex Clark and Contributors
-  https://github.com/python-pillow/Pillow
-  https://pypi.org/project/pillow/
-
-- webcolors (BSD License)
-  Copyright (c) 2009-2025 James Bennett
-  https://github.com/ubernostrum/webcolors
-  https://pypi.org/project/webcolors/
-
-- OpenCV (Apache License 2.0)
-  Copyright (c) 2000-2026 Intel Corporation and Contributors
-  https://github.com/opencv/opencv
-  https://pypi.org/project/opencv-python/
+- Colorama (BSD 3-Clause License)
+  Copyright (c) 2010-2025 Jonathan Hartley & Arnon Yaari
+  https://github.com/tartley/colorama
+  https://pypi.org/project/colorama/
 
 - NumPy (BSD License)
   Copyright (c) 2005-2026 NumPy Developers
   https://github.com/numpy/numpy
   https://pypi.org/project/numpy/
 
-- pytest (MIT)
+- OpenCV (Apache License 2.0)
+  Copyright (c) 2000-2026 Intel Corporation and Contributors
+  https://github.com/opencv/opencv
+  https://pypi.org/project/opencv-python/
+
+- pdfplumber (MIT License)
+  Copyright (c) 2015-2026 Jeremy Singer-Vine
+  https://github.com/jsvine/pdfplumber
+  https://pypi.org/project/pdfplumber/
+
+- Pillow (HPND License)
+  Copyright (c) 1997-2026 Jeffrey Alex Clark and Contributors
+  https://github.com/python-pillow/Pillow
+  https://pypi.org/project/pillow/
+
+- PyTest (MIT)
   Copyright (c) 2004-2025 Holger Krekel
   https://github.com/pytest-dev/pytest
   https://pypi.org/project/pytest/
-
-- Colorama (BSD 3-Clause License)
-  Copyright (c) 2010-2025 Jonathan Hartley & Arnon Yaari
-  https://github.com/tartley/colorama
-  https://pypi.org/project/colorama/
 
 - Requests (Apache License 2.0)
   Copyright (c) 2011-2025 Kenneth Reitz & contributors
   https://github.com/psf/requests
   https://pypi.org/project/requests/
+
+- webcolors (BSD License)
+  Copyright (c) 2009-2025 James Bennett
+  https://github.com/ubernostrum/webcolors
+  https://pypi.org/project/webcolors/
