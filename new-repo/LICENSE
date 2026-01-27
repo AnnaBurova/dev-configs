@@ -22,6 +22,20 @@ SOFTWARE.
 
 ================================================================================
 
+All rights reserved
+
+Copyright (c) 2026 Anna Burova
+
+Without written permission from Anna Burova, it is prohibited to:
+- copy
+- modify
+- distribute
+- sell
+- use for commercial purposes
+- publish online
+
+================================================================================
+
 This project uses components from the Python standard library,
 licensed under the Python Software Foundation License (PSF License):
 https://docs.python.org/3/license.html
@@ -34,7 +48,7 @@ https://docs.python.org/3/license.html
 - datetime - date and time objects
 
 - builtins - implicit base types
-- collections.abc  — abstract base classes for containers (e.g., Sequence)
+- collections - high-performance container datatypes
 - gc - garbage collector interface
 - tempfile - temporary files and directories
 - unittest.mock - testing and mocking utilities
@@ -52,6 +66,30 @@ https://docs.python.org/3/license.html
 ================================================================================
 
 This project uses the following third-party libraries:
+
+- NewtUtils
+  Copyright (c) 2025-2026 Anna Burova
+  https://github.com/AnnaBurova/dev-newtutils
+
+- Pillow (HPND License)
+  Copyright (c) 1997-2026 Jeffrey Alex Clark and Contributors
+  https://github.com/python-pillow/Pillow
+  https://pypi.org/project/pillow/
+
+- webcolors (BSD License)
+  Copyright (c) 2009-2025 James Bennett
+  https://github.com/ubernostrum/webcolors
+  https://pypi.org/project/webcolors/
+
+- OpenCV (Apache License 2.0)
+  Copyright (c) 2000-2026 Intel Corporation and Contributors
+  https://github.com/opencv/opencv
+  https://pypi.org/project/opencv-python/
+
+- NumPy (BSD License)
+  Copyright (c) 2005-2026 NumPy Developers
+  https://github.com/numpy/numpy
+  https://pypi.org/project/numpy/
 
 - pytest (MIT)
   Copyright (c) 2004-2025 Holger Krekel
