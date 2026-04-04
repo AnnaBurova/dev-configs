@@ -1,39 +1,73 @@
 {
-  "window.zoomLevel": 0.6,
+  "window.zoomLevel": 0.3,
+
+  "workbench.editor.closeOnFileDelete": true,
+
   "editor.fontSize": 12,
+  "terminal.integrated.fontSize": 12,
   "debug.console.fontSize": 12,
   "chat.editor.fontSize": 12,
   "markdown.preview.fontSize": 12,
-  "terminal.integrated.fontSize": 12,
-  "workbench.editor.closeOnFileDelete": true,
-  "files.autoGuessEncoding": false,
-  "files.autoSave": "onFocusChange",
-  "files.encoding": "utf8",
-  "files.eol": "\n",
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
+
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.scale": 1,
+  "editor.padding.top": 30,
   "editor.autoIndent": "brackets",
   "editor.detectIndentation": false,
-  "editor.minimap.scale": 1,
-  "editor.minimap.showSlider": "always",
-  "editor.renderWhitespace": "all",
-  "editor.rulers": [80, 100, 120],
   "editor.wordWrap": "on",
+  "editor.rulers": [80, 100, 120],
   "editor.wordWrapColumn": 120,
   "editor.stickyScroll.enabled": true,
   "editor.stickyScroll.maxLineCount": 10,
+  "editor.quickSuggestions": { "other": "off" },
+  "editor.renderWhitespace": "all",
   "editor.renderControlCharacters": false,
   "editor.experimentalWhitespaceRendering": "font",
-  "editor.padding.top": 30,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.largeFileOptimizations": true,
+  "editor.trimAutoWhitespace": true,
 
-  "editor.quickSuggestions": {
-    "other": "off"
+  "files.autoSave": "onFocusChange",
+  "files.autoGuessEncoding": false,
+  "files.encoding": "utf8",
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+
+  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.env.windows": {
+    "PYTHONIOENCODING": "utf-8",
+    "CHCP": "65001"
   },
 
-  // Global defaults - apply to every file
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.trimAutoWhitespace": true,
+  "diffEditor.maxFileSize": 1,
+  "diffEditor.maxComputationTime": 5000,
+
+  "git.ignoreLimitWarning": true,
+
+  "accessibility.underlineLinks": true,
+
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/__pycache__": true
+  },
+
+  // https://github.com/nhoizey/vscode-gremlins
+  "gremlins.showInProblemPane": true,
+  "gremlins.characters": {
+    // Ignore right single quotation mark ’
+    "2019": { "level": "none" },
+    // Ignore en dash –
+    "2013": { "level": "none" },
+    // Ignore left double quotation mark “
+    "201c": { "level": "none" },
+    // Ignore right double quotation mark ”
+    "201d": { "level": "none" }
+  },
 
   // Overrides
   "[python]": {
@@ -46,31 +80,11 @@
     "files.trimTrailingWhitespace": false,
     "editor.trimAutoWhitespace": false
   },
-
-  "terminal.integrated.lineHeight": 1,
-  "terminal.integrated.env.windows": {
-    "PYTHONIOENCODING": "utf-8",
-    "CHCP": "65001"
+  "[plaintext]": {
+    "files.trimTrailingWhitespace": false,
+    "editor.trimAutoWhitespace": false
   },
 
-  "git.ignoreLimitWarning": true,
-  "accessibility.underlineLinks": true,
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.autoImportCompletions": true,
-
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/__pycache__": true
-  },
-
-  "python.analysis.extraPaths": [
-    "D:/VS_Code/dev-newtutils"
-  ],
-  "python.defaultInterpreterPath": "C:/ProgramData/anaconda3/python.exe",
-
-  "gremlins.showInProblemPane" : true,
-
-  // "CodeGPT.apiKey": "CodeGPT Plus Beta",
   // Optional: set your CodeGPT API key in local settings.json (not committed)
   "CodeGPT.apiKey": "YOUR_API_KEY_HERE"
 }
