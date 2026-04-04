@@ -84,6 +84,6 @@ Treat `docstring.py` as the canonical template: copy its structure and adapt nam
 - Internal templates:
   - `dev-configs/guidelines/docstring.py`
 
-***
+---
 
 By following this guide, all NewtCode Python modules will maintain clear, professional, and unified documentation standards.

@@ -4,14 +4,13 @@ This document defines the official Python code style, structure, and behavioral 
 
 Following these standards ensures consistent, reliable, and maintainable code across the entire codebase.
 
-***
+---
 
 ## Environment Context
 
 - **Operating system:** Windows 11
 - **Editors:** Visual Studio Code, Sublime Text 3
-- **Python version:** 3.13 (Anaconda environment)
-  - Interpreter path: `C:/ProgramData/anaconda3/python.exe`
+- **Python version:** 3.14
 
 ## General Rules
 
@@ -69,6 +68,6 @@ When sorting collections or dictionaries:
 - Always declare an explicit return type annotation for functions and methods.
 - Code must behave identically on both Windows and Linux.
 
-***
+---
 
 By following these standards, all NewtCode Python modules remain stable, maintainable, and consistent across different environments.

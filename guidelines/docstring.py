@@ -10,8 +10,7 @@ def my_function(
         param1: int,
         param2: str
         ) -> bool:
-    """
-    Short description of what the function does.
+    """ Short description of what the function does.
 
     Longer description (optional, can span multiple lines).
     Longer description (optional, can span multiple lines).
