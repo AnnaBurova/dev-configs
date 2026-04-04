@@ -49,9 +49,10 @@ https://docs.python.org/3/license.html
 
 - time - timing and sleep utilities
 - datetime - date and time objects
+- collections - high-performance container datatypes
+- typing - type hints (Any, TextIO)
 
 - builtins - implicit base types
-- collections - high-performance container datatypes
 - gc - garbage collector interface
 - tempfile - temporary files and directories
 - unittest.mock - testing and mocking utilities
