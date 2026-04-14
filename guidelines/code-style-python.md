@@ -1,73 +1,159 @@
-# 🐍 NewtCode Python Code Style Guide
+# NewtCode Python Code Style Guide
 
-This document defines the official Python code style, structure, and behavioral conventions used across all NewtCode projects.
+This document defines the Python code style conventions, structure, documentation, error handling, and cross-platform behavior used across NewtCode projects.
 
-Following these standards ensures consistent, reliable, and maintainable code across the entire codebase.
+Following these standards helps keep the codebase consistent, reliable, and maintainable.
 
 ---
 
-## Environment Context
+## Development Environment
 
-- **Operating system:** Windows 11
-- **Editors:** Visual Studio Code, Sublime Text 3
-- **Python version:** 3.14
+- `newtutils` is a must-have utility for working with projects
+- **Python versions**: 3.14
 
-## General Rules
+---
 
-- Follow PEP 8 for code style and PEP 484 for type annotations.
-- Use native Python type hints and avoid importing collection types from `typing`.
-  - *Use `list[str]`, `dict[str, int]`, not `List[str]` or `Dict[str, int]`.*
-- All comments and docstrings must be written in English.
-- Use Google-style docstrings for all modules, functions, and classes.
+## General Rules to PEP 8 and PEP 484
 
-## File Header Format
+PEP 8 - Style Guide for Python Code
 
-Each Python source file must start with the following header block:
+PEP 484 - Type Hints
+
+- Use 4 spaces per indentation level.
+- Soft limit lines is 80 characters.
+- Hard limit lines is 120 characters.
+- Set rulers to [80, 100, 120] in editor.
+- Write all comments and docstrings in English.
+- Use `utf-8` encoding for all files.
+- Normalize all newlines to `\n` and `LF`.
+- For code examples:
+  - `docstring.py` is a reference for Google-style docstrings.
+  - `script.py` is a reference for general code style and structure.
+
+### Import statements examples:
+
+Imports should be grouped in the following order:
+
+- Standard library imports.
+- Related third party imports.
+- Local application/library specific imports.
+
+Check `new-repo/LICENSE` for the best order list of **standard library modules** used in NewtCode projects.
+
+### Type annotations examples:
 
 ```python
-"""
-Updated on YYYY-MM
-Created on YYYY-MM
-
-@author: NewtCode Anna Burova
-"""
+from __future__ import annotations
+data: int | str | None = None  # can be int, str, or None
+data: list[int | str] = [1, "two", 3]  # list of int or str elements
+data: set[int | str] = {1, "two", 3}  # set of int or str elements
+data: tuple[int, str] = (1, "two")  # first element must be int, second must be str
+data: dict[str, int] = {"a": 1, "b": 2}  # keys must be str, values must be int
 ```
 
-## Input Validation Rules
+### Bracket placement examples:
 
-- Every input parameter must be explicitly type-checked.
-- If the input is invalid:
-  - Log an error using:
-    ```python
-    import newtutils.console as NewtCons
+```python
+my_list = [
+    "item1",
+    "item2",
+    "item3",
+]
+```
 
-    NewtCons.error_msg(
-        "description of the problem",
-        location=__file__,
-        stop=False
-    )
-    ```
-  - Stop further execution if data integrity cannot be guaranteed.
-- If the input is valid:
-  - Process all data without loss or unnecessary filtering.
-  - The function must return the most correct and complete result possible, even in the presence of recoverable errors.
+```python
+my_dict = {
+    "key1": "value1",
+    "key2": "value2",
+    "key3": "value3",
+}
+```
 
-## Sorting and Collections
+### If-Else Statements examples:
 
-When sorting collections or dictionaries:
+```python
+if var1 > var2:
+    do_something_1()
+elif var1 == var2:
+    do_something_2()
+else:
+    do_something_3()
+```
 
-- Elements with missing keys must be moved to the end of the list.
-- Type comparison errors must not interrupt execution.
-- Mixed data types must be handled consistently and safely.
+```python
+variable = value_if_true if condition else value_if_false
 
-## Design Principles
+do_something_1() if var1 > var2 else do_something_2()
 
-- Functions must be as pure, predictable, and side-effect-free as reasonably possible.
-- Prioritize clarity, safety, and reliability over micro-optimizations.
-- Normalize all newlines to `\n`.
-- Always declare an explicit return type annotation for functions and methods.
-- Code must behave identically on both Windows and Linux.
+do_something_1() if var1 > var2 else do_something_2() if var1 == var2 else do_something_3()
+```
+
+```python
+if var1 > var2 and var3 > var4:
+    do_something_1()
+if var1 > var2 or var3 > var4:
+    do_something_2()
+if not var1 > var2:
+    do_something_3()
+if foo is not None:
+    do_something_4()
+```
+
+```python
+if (
+    var1 > var2
+    and var3 > var4
+):
+    do_something_1()
+elif (
+    var1 > var2
+    or var3 > var4
+):
+    do_something_2()
+else:
+    do_something_3()
+```
+
+### Backslash usage examples:
+
+```python
+with open('/path/to/some/file/with/very/long/path/to/read') as file_1, \
+     open('/path/to/some/file/with/very/long/path/to/write', 'w') as file_2:
+    file_2.write(file_1.read())
+```
 
 ---
 
-By following these standards, all NewtCode Python modules remain stable, maintainable, and consistent across different environments.
+## Input Validation
+
+- Explicitly type-check every input parameter before processing.
+- If an input is invalid, log the issue using `newtutils.console.error_msg()`.
+- Use `stop=True` only when execution cannot continue safely.
+
+Example:
+
+```python
+import newtutils.console as NewtCons
+
+NewtCons.error_msg(
+    "description of the problem",
+    location=__file__,
+    stop=False
+)
+```
+
+---
+
+## Global Rules
+
+- For valid input, process all data fully and avoid unnecessary filtering or truncation.
+- Raise exceptions for unrecoverable issues.
+- Return the most correct and complete result possible, including in recoverable-error cases.
+- Stop execution only when data integrity or correctness cannot be guaranteed.
+- Do not hide failures silently. Keep errors actionable and easy to trace.
+
+---
+
+## Summary
+
+By following these standards, all NewtCode Python code should be consistent, well-documented, type-safe, and predictable across different environments.
