@@ -10,33 +10,25 @@ def my_function(
         param1: int,
         param2: str
         ) -> bool:
-    """ Short description of what the function does.
+    """ ## Short description of what the function does.
 
-    Longer description (optional, can span multiple lines).
-    Longer description (optional, can span multiple lines).
-    Longer description (optional, can span multiple lines).
+    An optional longer description of what the function does on multiple lines.
 
     Args:
-        param1 (int):
-            Description of the first parameter.
-            Code:
+        param1 (int): Description of the first parameter.<br>Code:
             if else True False
-        param2 (str):
-            Description of the second parameter.
-        *args:
-            Variable length argument list.
-        **kwargs:
-            Arbitrary keyword arguments.
+            def function_call() -> None:
+                return None
+            function_call()
+        param2 (str): Description of the second parameter.
+        *args (tuple): Variable length positional arguments.
+        **kwargs (dict): Variable length keyword arguments.
 
     Returns:
-        out (bool | tuple):
-            True if the example condition succeeds,
-            otherwise False.
+        out (bool | tuple): True if the operation succeeds, otherwise False.
 
     Raises:
-        ValueError:
-            Raised when `param1` is less than zero
-            or when `param2` is an empty string.
+        ValueError: Raised when `param1` is less than zero or `param2` is empty.
     """
 
     return True
