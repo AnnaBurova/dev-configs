@@ -1,38 +1,38 @@
-# 🧾 Changelog — *XXX (NewtCode)*
+# Changelog — *XXX (NewtCode)*
 
 All notable changes to this project are documented here.  
 This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`).
 
 ---
 
-## 🚧 vNext — Upcoming
+## [vNext] — Upcoming
 
-### ✨ Added
+### Added
 
-* *(add new features here)*
+- *(add new features here)*
 
-### 🔧 Changed
+### Changed
 
-* *(describe modifications or improvements)*
+- *(describe modifications or improvements)*
 
-### 🐞 Fixed
+### Fixed
 
-* *(list bug fixes or error corrections)*
+- *(list bug fixes or error corrections)*
 
-### 🗑️ Removed
+### Removed
 
-* *(note any removed or deprecated features)*
+- *(note any removed or deprecated features)*
 
 ---
 
-## 🏷️ v0.1.0 — Initial setup
+## [0.1.0] — Initial setup
 
 **Date:** 2026-XX-XX
 
-### 🧩 Initial Setup
+### Added
 
 - Created project structure (`.gitignore`, `.gitattributes`).
 - Initialized the *XXX* repository.
 - Prepared the foundation for future modules and documentation.
 
-> 🪄 *The very first commit of the XXX project.*
+> *The very first commit of the XXX project.*
