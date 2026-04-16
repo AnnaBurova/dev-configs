@@ -1,0 +1,17 @@
+// Place your key bindings in this file to override the defaults
+// C:\Users\UserName\AppData\Roaming\Code\User\keybindings.json
+[
+  {
+    "key": "shift+alt+f2",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+  {
+    "key": "f9",
+    "command": "-editor.debug.action.toggleBreakpoint",
+    "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
+  },
+  {
+    "key": "f9",
+    "command": "editor.action.sortLinesAscending"
+  }
+]
