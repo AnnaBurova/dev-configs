@@ -21,7 +21,7 @@ Python 3.14.4
 
 # Check its location if needed
 PS C:\WINDOWS\system32> py -0p
--V:3.14[-64] *   C:\Users\UserName\AppData\Local\Python\pythoncore-3.14-64\python.exe
+-V:3.14[-64]  *  C:\Users\UserName\AppData\Local\Python\pythoncore-3.14-64\python.exe
 
 # Installation of other needed versions
 PS C:\WINDOWS\system32> py install 3.13
@@ -49,19 +49,19 @@ PS C:\WINDOWS\system32> where py
 
 # All other versions not listed here are modifications, tests and in development
 PS C:\WINDOWS\system32> py list --online
-Tag                            Name                                     Managed By   Version   Alias
-3.14[-64]                      Python 3.14.4                            PythonCore   3.14.4    python3.14-64.exe
-3.13[-64]                      Python 3.13.13                           PythonCore   3.13.13   python3.13-64.exe
-3.12[-64]                      Python 3.12.10                           PythonCore   3.12.10   python3.12-64.exe
-3.11[-64]                      Python 3.11.9                            PythonCore   3.11.9    python3.11-64.exe
-3.10[-64]                      Python 3.10.11                           PythonCore   3.10.11   python3.10.exe
-3.9[-64]                       Python 3.9.13                            PythonCore   3.9.13    python3.9.exe
-3.8[-64]                       Python 3.8.10                            PythonCore   3.8.10    python3.8.exe
-3.7[-64]                       Python 3.7.9                             PythonCore   3.7.9     python3.7.exe
-3.6[-64]                       Python 3.6.8                             PythonCore   3.6.8     python3.6.exe
-3.5[-64]                       Python 3.5.4                             PythonCore   3.5.4     python3.5.exe
-2.7-32                         Python 2.7.18                            PythonCore   2.7.18    python2.7.exe, python2.exe
-2.7[-64]                       Python 2.7.18                            PythonCore   2.7.18
+Tag         Name             Managed By   Version   Alias
+3.14[-64]   Python 3.14.4    PythonCore   3.14.4    python3.14-64.exe
+3.13[-64]   Python 3.13.13   PythonCore   3.13.13   python3.13-64.exe
+3.12[-64]   Python 3.12.10   PythonCore   3.12.10   python3.12-64.exe
+3.11[-64]   Python 3.11.9    PythonCore   3.11.9    python3.11-64.exe
+3.10[-64]   Python 3.10.11   PythonCore   3.10.11   python3.10.exe
+3.9[-64]    Python 3.9.13    PythonCore   3.9.13    python3.9.exe
+3.8[-64]    Python 3.8.10    PythonCore   3.8.10    python3.8.exe
+3.7[-64]    Python 3.7.9     PythonCore   3.7.9     python3.7.exe
+3.6[-64]    Python 3.6.8     PythonCore   3.6.8     python3.6.exe
+3.5[-64]    Python 3.5.4     PythonCore   3.5.4     python3.5.exe
+2.7-32      Python 2.7.18    PythonCore   2.7.18    python2.7.exe, python2.exe
+2.7[-64]    Python 2.7.18    PythonCore   2.7.18
 
 # How to check versions
 PS C:\WINDOWS\system32> python --version
