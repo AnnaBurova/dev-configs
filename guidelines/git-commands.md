@@ -1,11 +1,37 @@
 ```bash
 # Basic Commands
+git status               # Show working tree status
 git add <filename>       # Add specific file to staging
 git add .                # Add all modified files to staging
 git commit -m "Message"  # Commit with a message
 git diff                 # View unstaged changes
 git diff --summary       # Summary of changed files only
-git reset                # Unstage all files (remove from staging area)
+git diff --staged        # View staged changes
+
+
+# Stash Workflow
+# Use stash when you need to temporarily save unfinished work.
+git stash                    # Stash unstaged changes (keep untracked files)
+git stash -u                 # Stash all changes including untracked files
+git stash push -m "Message"  # Stash with a message for easier identification
+git stash list               # List all stashed changes
+git stash show -p            # Show details of the most recent stash
+git stash pop                # Apply the most recent stash and remove it from the stash list
+git stash apply              # Apply the most recent stash without removing it from the stash list
+git stash drop               # Remove the most recent stash without applying it
+git stash clear              # Remove all stashes
+
+
+# Reset and Restore
+git reset                       # Unstage all files (remove from staging area)
+git reset <filename>            # Unstage a file (keep changes in working directory)
+git reset --soft HEAD~1         # Undo last commit, keep staged changes
+git reset --mixed HEAD~1        # Undo last commit, keep changes unstaged
+git reset --hard HEAD~1         # Undo last commit and discard changes
+# Use  git reset --hard  only when you are sure you want to lose local changes.
+git restore                     # Discard changes in working directory
+git restore <filename>          # Discard local changes in a file
+git restore --staged <filename> # Unstage a file (keep changes in working directory)
 
 
 # Date Management
@@ -17,6 +43,7 @@ GIT_AUTHOR_DATE="2026-01-30T14:00:00" \
 GIT_COMMITTER_DATE="2026-01-30T14:00:00" \
 git commit --amend --no-edit --date="2026-01-30T14:00:00"
 
+# GIT_AUTHOR_DATE and GIT_COMMITTER_DATE set the actual timestamps
 # --amend                # rewrite the last commit
 # --no-edit              # keep the same commit message
 # --date                 # manually set commit date and author timestamp
@@ -25,8 +52,10 @@ git commit --amend --no-edit --date="2026-01-30T14:00:00"
 
 
 # Log and History
-git log --oneline                                                       # Compact log view
-git log --oneline > history.txt                                         # Export log summary to a file
+git log --oneline                           # Compact log view
+git log --oneline > history.txt             # Export log summary to a file
+git log --graph --oneline --decorate --all  # Visualize branch structure and commits
+
 git log --pretty=format:"%h %ad | %an | %s" --date=short > history.txt  # Detailed custom log format
 
 git log --pretty=format:"%h%nAuthor: %an%nDate: %ad%nMessage: %s%n" --date=iso
@@ -40,17 +69,27 @@ git log --pretty=format:"%h %s%n  Author date: %ad%n  Commit date: %cd" --date=i
 #   Author date: 2026-01-30 14:00:00 +0300
 #   Commit date: 2026-01-30 14:00:00 +0300
 
+git show <commit>  # Show details of a specific commit
+git blame <file>   # Show line-by-line history of a file
+
 
 # File Normalization
+# Use this after changing .gitattributes or line-ending rules.
 git add --renormalize <filename>  # Re-apply .gitattributes rules to specific file
 git add --renormalize .           # Re-apply .gitattributes rules to all files
 
 
 # Branching
+git branch                      # List local branches
+git branch -a                   # List all branches
+git switch -c feature/new-ui    # Create and switch to a branch
+git switch main                 # Switch to main branch
 git checkout -b feature/new-ui  # Create and switch to a new branch
 git checkout main               # Switch to an existing branch
 git merge feature/new-ui        # Merge a branch into the current one
+git merge origin/main           # Merge the latest changes from main into the current branch
 git branch -d feature/new-ui    # Delete a branch (after merge)
+git branch -D feature/new-ui    # Force delete branch
 
 
 # Remote Management
@@ -88,7 +127,9 @@ git fetch origin
 git rebase origin/main
 
 # Interactive rebase for cleanup
-git rebase -i HEAD~5
+git rebase -i HEAD~5   # Edit last 5 commits
+git rebase --continue  # Continue after resolving conflicts
+git rebase --abort     # Abort rebase and return to original state
 
 
 # Tags and Releases
@@ -100,11 +141,12 @@ git ls-remote --tags origin           # List all remote tags
 git tag v1.0.0                        # Create lightweight tag
 git tag -a v1.0.0 -m "First release"  # Create annotated tag (recommended)
 git tag -a v1.0.0 332902e -m "v1.0.0 — First release"  # Tag specific commit
-
 git tag -d v1.0.0                     # Delete local tag
+
 git show v1.0.0                       # Show tag details
 git push --tags                       # Push all tags to remote
-git push origin --force --tags
+git push origin --force --tags        # Force push tags (use with caution)
+git push origin v1.0.0                # Push specific tag to remote
 git fetch --tags                      # Fetch all tags from remote
 git checkout v1.0.0                   # Checkout to tagged version
 ```
