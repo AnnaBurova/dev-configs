@@ -168,9 +168,9 @@ Python-specific rules:
 - Prefer clear, testable functions over implicit side effects.
 - Keep module-level behavior minimal.
 - Check for guidelines for more details and examples:
-  - [guidelines/code-style-python.md](https://github.com/AnnaBurova/dev-configs/blob/main/guidelines/code-style-python.md)
-  - [guidelines/docstring.py](https://github.com/AnnaBurova/dev-configs/blob/main/guidelines/docstring.py)
-  - [guidelines/script.py](https://github.com/AnnaBurova/dev-configs/blob/main/guidelines/script.py)
+  - [guidelines/code-style-python.md](https://github.com/AnnaBurova/dev-configs/blob/main/guidelines/projects/code-style-python.md)
+  - [guidelines/docstring.py](https://github.com/AnnaBurova/dev-configs/blob/main/guidelines/projects/docstring.py)
+  - [guidelines/script.py](https://github.com/AnnaBurova/dev-configs/blob/main/guidelines/projects/script.py)
 
 Not acceptable:
 
