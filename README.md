@@ -1,61 +1,71 @@
-# 🦎 Dev-Config — Chocolate Box by `NewtCode`
+# About Developer Configs (NewtCode)
 
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.14+-blue.svg)](https://www.python.org/)
 
-A collection of configuration files, templates, and scripts for maintaining consistent
-Git repository structure, formatting, and behavior across all projects.
-
----
-
-## 📖 Overview
-
-This repository contains my preferred settings and tools for working with Git and project files.
-It provides a unified baseline for code style, text normalization, and automation of common checks,
-making repositories clean, predictable, and easy to maintain.
+This repository contains preferred settings and documentations, project templates, and editor configurations.
 
 ---
 
-## 🧩 Features
+## Overview
 
-| File | Purpose |
-|------|----------|
-| `.gitignore` | Specifies files and directories that should not be tracked by Git. |
-| `.gitattributes` | Ensures consistent text normalization (LF endings), defines diff rules, and marks binary files. |
-| `scripts/check_gitattributes.sh` | Bash script that verifies `.gitattributes` consistency across all tracked files. |
-| `scripts/copy_files.py` | Python script to copy predefined files to multiple project folders and report missing or failed destinations. |
-| `settings/.editorconfig` | Defines indentation, line endings, and encoding rules for all file types to maintain consistent formatting in editors. |
-| `settings/Sublime_Text/Preferences.sublime-settings` | Sublime Text editor preferences, e.g., tabs vs spaces, font size, line endings, and other editor behaviors. |
-| `settings/VS_Code/settings.json` | VS Code editor settings, such as formatting rules, extensions configuration, and editor behavior. |
+This repository serves as a centralized collection of best practices, templates, and configurations for developers. It includes Git settings for consistent version control, project templates to quickly bootstrap new repositories, and editor configurations to maintain a uniform coding style across different development environments. The goal is to provide a unified baseline for code style, text normalization, repository bootstrapping, and best-practice guidance for maintaining clean, predictable projects.
 
 ---
 
-## ⚙️ Requirements
+## Features
 
-- **Python 3.10+** (tested with Python 3.10, 3.11, 3.12, 3.13)
-- Full type hint support with `from __future__ import annotations`
-
-## 📦 Dependencies
-
-All other modules rely only on the Python Standard Library.
-
----
-
-## 🚀 Getting Started
-
-- [Installation Guide](INSTALL.md) — setup instructions and configuration details.
-
----
-
-## 📋 Development Notes
-
-- [TODO list](TODO) — Planned improvements
-- [CHANGELOG](CHANGELOG.md) — Version history
-- [CONTRIBUTING](CONTRIBUTING.md) — Style and contribution rules
+| Path | Purpose |
+|------|---------|
+| `guidelines/` | Style and workflow guidelines. |
+| `guidelines/projects/` | Project-specific guidelines and templates. |
+| `guidelines/git-commands.md` | Recommended Git commands and workflows for consistent version control. |
+| `guidelines/python-installation.md` | Recommended Python installation and setup instructions. |
+| `new-repo/` | Starter repository templates for bootstrapping new projects. |
+| `settings/` | Editor configuration files for consistent formatting and behavior across different editors. |
+| `settings/.editorconfig` | Editor formatting rules for indentation, line endings, and encoding. |
+| `settings/Sublime_Text/` | Sublime Text editor preferences. |
+| `settings/VS_Code/` | VS Code editor settings and extension recommendations. |
 
 ---
 
-## 🪪 License
+## Requirements
 
+- Python 3.10
+- Python 3.11
+- Python 3.12
+- Python 3.13
+- Python 3.14
+
+---
+
+## Dependencies
+
+This repository is self-contained and relies only on the Python Standard Library.
+
+---
+
+## Getting Started
+
+- Use `new-repo/` templates to bootstrap a new repository.
+- See `guidelines/` for Git workflow, documentation, and project conventions.
+
+---
+
+## Development Notes
+
+- [TODO list](TODO) — Planned improvements and features for this repository.
+- [CHANGELOG](CHANGELOG.md) — Version history and release notes.
+- [CONTRIBUTING](CONTRIBUTING.md) — Guidelines for contributing to the project.
+- [Testing Guide](tests/TESTING.md) — Instructions for running tests and contributing test cases.
+
+---
+
+## License
+
+- [AUTHORS](AUTHORS) — Credits to contributors and external resources.
 - [COPYRIGHT](COPYRIGHT) — Copyright information for original and included materials.
-- [LICENSE](LICENSE) — The license governing the use of this repository (MIT).
-- [AUTHORS](AUTHORS) — List of contributors and credits for external resources.
+- [LICENSE](LICENSE) — The license governing repository use.
