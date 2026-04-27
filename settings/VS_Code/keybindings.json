@@ -6,6 +6,43 @@
     "command": "workbench.action.openGlobalKeybindingsFile"
   },
   {
+    "key": "ctrl+c",
+    "command": "-chat.inlineResourceAnchor.copyResource",
+    "when": "chatAttachmentResource"
+  },
+  {
+    "key": "f5",
+    "command": "python.execInTerminal-icon"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.continue",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'"
+  },
+  {
+    "key": "f5",
+    "command": "-debug.openView",
+    "when": "!debuggersAvailable"
+  },
+  {
+    "key": "f6",
+    "command": "python.execInDedicatedTerminal"
+  },
+  {
+    "key": "f6",
+    "command": "-workbench.action.debug.pause",
+    "when": "debugState == 'running'"
+  },
+  {
+    "key": "f6",
+    "command": "-workbench.action.focusNextPart"
+  },
+  {
     "key": "f9",
     "command": "-editor.debug.action.toggleBreakpoint",
     "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
