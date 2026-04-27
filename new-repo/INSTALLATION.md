@@ -11,21 +11,29 @@ dev-folder/            # Root repository
 │
 ├── folder/            # Main Python package (module source)
 │   ├── __init__.py
-│   ├── file.py
+│   ├── script.py
 │   └── (other files)
 │
 ├── tests/             # Manual and automated test scripts
-│   ├── TESTING.md     # Test documentation and instructions
+│   ├── output/        # Test output logs
+│   │   ├── test_*_1.txt
+│   │   ├── test_*_2.txt
+│   │   ├── test_*_3.txt
+│   │   ├── test_*_4.txt
+│   │   └── (other test logs)
+│   │
+│   ├── README.md      # Test documentation and instructions
 │   ├── _list.sh       # (Optional) Test runner batch script
-│   ├── test_*.py      # Pytest test files
-│   └── (other test files)
+│   ├── test_*.py      # Pytest test scripts for modules
+│   ├── test_*_*.py    # Pytest test scripts for functions
+│   └── (other test scripts)
 │
 ├── CHANGELOG.md       # Version history and release notes
 ├── CONTRIBUTING.md    # Guidelines for contributors
-├── INSTALL.md         # Installation and development setup guide (This file)
+├── INSTALLATION.md    # Installation and development setup guide (This file)
 ├── LICENSE            # License file
 ├── pyproject.toml     # Build system configuration and project metadata
-├── requirements.txt   # User dependencies
+├── requirements.txt   # Project dependencies
 └── README.md          # Project overview and usage instructions
 ```
 
@@ -39,6 +47,8 @@ dev-folder/            # Root repository
 - Python 3.13
 - Python 3.14
 
+Other dependencies are listed in `requirements.txt`.
+
 ---
 
 ## Installation Modes
@@ -49,7 +59,7 @@ Project <PROJECT_NAME> is a local development library and not published on PyPI.
 Installation should be done directly from project folder.
 
 
-#### Option — Regular local installation (static copy)
+### Option — Regular local installation (static copy)
 
 Installs a copy of the package.
 Recommended when only want to use project, not actively edit its source code.
@@ -71,10 +81,10 @@ python -m pip install --user .
 - `--user` — installs into personal environment.
 
 
-#### Option — Editable local installation (recommended for development)
+### Option — Editable local installation (recommended for development)
 
 Links the library directly to working folder.
-Any code changes in `dev-folder` will take effect immediately.
+Any code changes in `dev-folder/folder/` will take effect immediately.
 No reinstall needed.
 
 ```bash
@@ -93,10 +103,10 @@ python -m pip install --user -e .
 - `--editable` or `-e` — link the project folder directly for live development
 
 
-#### Option — Temporary local usage (without installation)
+### Option — Temporary local usage (without installation)
 
 To run or test functions directly from downloaded source.
-This approach doesn't install anything globally, it only extends your Python path for the current session.
+This approach doesn't install anything globally, it only extends Python path for the current session.
 
 ```python
 # Import needful modules
@@ -118,7 +128,7 @@ import project as Proj
 
 ### VS Code Settings
 
-To make VS Code recognize your local package:
+To make VS Code recognize local package:
 
 1. Create or open `.vscode/settings.json`
 2. Add or extend following:
@@ -129,7 +139,7 @@ To make VS Code recognize your local package:
       ]
     }
     ```
-    - Adjust the paths above to match your actual project location and Python interpreter path.
+    - Adjust the paths above to match actual project location and Python interpreter path.
 3. Reload VS Code (`Ctrl + Shift + P` > "Developer: Reload Window").
 
 ---
@@ -150,7 +160,7 @@ python -m pip uninstall project
 
 ## Usage Examples
 
-After installation, you can import <PROJECT_NAME> anywhere:
+After installation, <PROJECT_NAME> can be imported anywhere:
 
 ```python
 # Import the main package (recommended - exports common functions)
