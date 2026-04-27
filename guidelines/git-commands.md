@@ -7,6 +7,8 @@ git commit -m "Message"  # Commit with a message
 git diff                 # View unstaged changes
 git diff --summary       # Summary of changed files only
 git diff --staged        # View staged changes
+git diff --staged > changes.patch  # Compare staged changes and save to patch file
+git diff v1.0.0 v1.1.1 > changes.patch  # Compare two tags and save to patch file
 
 
 # Stash Workflow
@@ -137,6 +139,9 @@ git rebase --abort     # Abort rebase and return to original state
 git tag                               # List all local tags
 git tag -n                            # List all local tags with annotation
 git ls-remote --tags origin           # List all remote tags
+
+git tag --sort=v:refname -n           # List tags sorted by version number with annotation
+git config --global tag.sort version:refname  # Set default tag sorting to version number (once per repository or globally)
 
 git tag v1.0.0                        # Create lightweight tag
 git tag -a v1.0.0 -m "First release"  # Create annotated tag (recommended)
