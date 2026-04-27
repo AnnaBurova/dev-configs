@@ -15,6 +15,10 @@ This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PA
 
 - *(describe modifications or improvements)*
 
+### Testing
+
+- *(list new tests or testing improvements)*
+
 ### Fixed
 
 - *(list bug fixes or error corrections)*
@@ -22,6 +26,32 @@ This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PA
 ### Removed
 
 - *(note any removed or deprecated features)*
+
+---
+
+## [0.2.XX] — New current version
+
+**Date:** 2026-XX-XX
+
+### Added
+
+- (add new features here)
+
+### Changed
+
+- (describe modifications or improvements)
+
+### Testing
+
+- (list new tests or testing improvements)
+
+### Fixed
+
+- (list bug fixes or error corrections)
+
+### Removed
+
+- (note any removed or deprecated features)
 
 ---
 
