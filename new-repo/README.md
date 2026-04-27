@@ -1,10 +1,12 @@
 # About <PROJECT_NAME> (NewtCode)
 
-[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
-[![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
-[![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/)
-[![Python](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/)
-[![Python](https://img.shields.io/badge/python-3.14+-blue.svg)](https://www.python.org/)
+[![Version](https://img.shields.io/badge/version-v0.1.0-orange.svg)](https://github.com/AnnaBurova/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.14-blue.svg)](https://www.python.org/)
 
 Short description of the project, its purpose, and key features.
 
@@ -52,10 +54,16 @@ Longer description of the project, its goals, and how it fits into the ecosystem
 
 This repository is self-contained and relies only on the Python Standard Library.
 
-- [unknown](https://pypi.org/project/unknown/) — Short description of the library.  
-  Licensed under the [MIT](https://github.com/unknown-dev/unknown/blob/main/LICENSE).
+This project uses the following third-party libraries:
+
+- [NewtUtils](https://github.com/AnnaBurova/dev-newtutils)
+- [Colorama](https://github.com/tartley/colorama) (BSD 3-Clause License)
+- [PyTest](https://github.com/pytest-dev/pytest) (MIT License)
+- [Requests](https://github.com/psf/requests) (Apache License 2.0)
 
 All other modules rely only on the Python Standard Library.
+
+For more details on dependencies, see the [LICENSE](LICENSE) file.
 
 ---
 
@@ -70,7 +78,7 @@ All other modules rely only on the Python Standard Library.
 - [TODO list](TODO) — Planned improvements and features for this repository.
 - [CHANGELOG](CHANGELOG.md) — Version history and release notes.
 - [CONTRIBUTING](CONTRIBUTING.md) — Guidelines for contributing to the project.
-- [Testing Guide](tests/TESTING.md) — Instructions for running tests and contributing test cases.
+- [Testing Guide](tests/README.md) — Instructions for running tests and contributing test cases.
 
 ---
 
