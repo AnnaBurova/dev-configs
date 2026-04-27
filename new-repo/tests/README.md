@@ -1,6 +1,6 @@
 # Tests for <PROJECT_NAME>
 
-This directory contains comprehensive unit tests for the `<PROJECT_NAME>` package.
+This directory contains comprehensive unit tests for the <PROJECT_NAME> package.
 
 ## Test Files
 
@@ -13,9 +13,10 @@ This directory contains comprehensive unit tests for the `<PROJECT_NAME>` packag
 
 `_list.sh` — Batch Test Runner
 
-The `_list.sh` script automatically runs all test modules with different pytest options and saves the output to text files. This is useful for generating reference output files or batch testing.
+The `_list.sh` script automatically runs all test modules with different pytest options and saves the output to text files.
+This is useful for generating reference output files or batch testing.
 
-### What it does:
+### What it does
 
 - Runs pytest for all listed modules
 - Executes each module with 4 different pytest configurations:
@@ -26,12 +27,12 @@ The `_list.sh` script automatically runs all test modules with different pytest 
 - Saves output to `test_*_output_*.txt` files in the tests directory
 - Converts line endings to LF format (requires `dos2unix` if available)
 
-**Requirements:**
+## Requirements
 
 - `pytest` must be installed
 - Optional: `dos2unix` (for line ending conversion; script will continue without it)
 
-**Usage:**
+## Usage
 
 Navigate to the tests directory first:
 ```bash
