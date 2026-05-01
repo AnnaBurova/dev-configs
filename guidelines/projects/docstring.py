@@ -28,28 +28,41 @@ def my_function(
     An optional longer description of what the function does on multiple lines.
 
     Args:
-        param1 (int): Description of the first parameter. <br>Code:
+        param1 (int):
+            Description of the first parameter.<br>
+            Code:
             if else True False
             def function_call() -> None:
                 return None
             function_call()
-        param2 (str): Description of the second parameter. <br>Default is "default".
-        *args (tuple): Variable length positional arguments.
-        **kwargs (dict): Variable length keyword arguments.
+        param2 (str):
+            Description of the second parameter.<br>
+            Default is "default".
+        *args (tuple):
+            Variable length positional arguments.
+        **kwargs (dict):
+            Variable length keyword arguments.
 
     Returns:
-        out (None): The function does not return a value.
+        out (None):
+            The function does not return a value.
     Returns:
-        out (bool): True if the operation succeeds, <br>otherwise False.
+        out (bool):
+            True if the operation succeeds,<br>
+            otherwise False.
     Returns:
-        out (int): The result based on `param1`.
+        out (int):
+            The result based on `param1`.
     Returns:
-        out (str): A message generated using `param2`.
+        out (str):
+            A message generated using `param2`.
     Returns:
-        out (tuple): A tuple containing multiple results.
+        out (tuple):
+            A tuple containing multiple results.
 
     Raises:
-        ValueError: Raised when `param1` is less than zero or `param2` is empty.
+        ValueError:
+            Raised when `param1` is less than zero or `param2` is empty.
     """
 
     # TODO: Implement the function logic here
