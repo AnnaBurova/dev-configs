@@ -89,11 +89,25 @@ $ py -3.13 -m venv .venv313
 $ py -3.12 -m venv .venv312
 $ py -3.11 -m venv .venv311
 $ py -3.10 -m venv .venv310
+# On Linux
+$ python3 -m venv .venvLinux312
+
+# Activate environments
+$ (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\VS_Code\.venv314\Scripts\Activate.ps1)
+$ (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\VS_Code\.venv313\Scripts\Activate.ps1)
+$ (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\VS_Code\.venv312\Scripts\Activate.ps1)
+$ (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\VS_Code\.venv311\Scripts\Activate.ps1)
+$ (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\VS_Code\.venv310\Scripts\Activate.ps1)
+# On Linux
+$ source .venvLinux312/bin/activate
 
 # Install packages in each environment
-$ python -m pip install requests
-$ py -3.13 -m pip install requests
-$ py -3.12 -m pip install requests
+$ python -m pip install pytest
+
+$ py -3.13 -m pip install pytest
+$ py -3.12 -m pip install pytest
+$ py -3.11 -m pip install pytest
+$ py -3.10 -m pip install pytest
 
 
 # Uninstalling all packages from an environment
