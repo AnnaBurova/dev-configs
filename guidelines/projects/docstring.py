@@ -37,7 +37,13 @@ def my_function(
             function_call()
         param2 (str):
             Description of the second parameter.<br>
-            Default is "default".
+            Defaults to empty string.
+            Defaults to 0 (the first element).
+            Defaults to 5.
+            Defaults to None.
+            Defaults to True.
+            Defaults to False.
+            Defaults to "Unknown".
         *args (tuple):
             Variable length positional arguments.
         **kwargs (dict):
@@ -61,6 +67,11 @@ def my_function(
             A tuple containing multiple results.
 
     Raises:
+        SystemExit:
+            If `KeyboardInterrupt` by user (Ctrl+C) occurs, user enters `x`, or no valid selection after 5 attempts.
+            If `KeyboardInterrupt` by user (Ctrl+C) occurs, always terminates with exit code 1.
+            If directories do not match, terminates with exit code 1.
+            If an error occurs and `stop=True`, terminates with exit code 1.
         ValueError:
             Raised when `param1` is less than zero or `param2` is empty.
     """
