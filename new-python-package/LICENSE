@@ -43,3 +43,28 @@ parties.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
 # -----------------------------------------------------------------------------
+
+This project uses components from the Python standard library,
+licensed under the Python Software Foundation License (PSF License):
+https://docs.python.org/3/license.html
+https://docs.python.org/3/library/index.html
+
+- __future__ - Future statement definitions
+
+- sys - System-specific parameters and functions
+
+# -----------------------------------------------------------------------------
+
+This project uses the following third-party libraries:
+
+- PyTest (MIT License)
+    Copyright (c) 2004-2026 Holger Krekel and others
+    https://github.com/pytest-dev/pytest
+    https://pypi.org/project/pytest/
+
+- PyTest-Cov (MIT License)
+    Copyright (c) 2010-2026 Marc Schlaich and Ionel Cristian Maries
+    https://github.com/pytest-dev/pytest-cov
+    https://pypi.org/project/pytest-cov/
+
+# -----------------------------------------------------------------------------
