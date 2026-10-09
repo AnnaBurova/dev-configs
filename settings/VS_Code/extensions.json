@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "nhoizey.gremlins",
+    "juggernautjp.less-toml",
+    "yzhang.markdown-all-in-one",
+    "bierner.markdown-preview-github-styles",
+    "ms-python.vscode-pylance",
+    "ms-python.python",
+    "ms-python.debugpy",
+    "ms-python.vscode-python-envs",
+    "mechatroner.rainbow-csv",
+    // "continue.continue",
+    // "danlambiase.lmstudio-copilot-provider",
+    // "github.vscode-github-actions",
+  ]
+}
