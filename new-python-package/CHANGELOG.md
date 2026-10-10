@@ -8,7 +8,7 @@ Entries follow [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`).
 
 ## [0.2.XX] New current version
 
-**Date:** 2024-XX-XX
+**Date:** 20XX-XX-XX
 
 ### Added
 
@@ -34,7 +34,7 @@ Entries follow [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`).
 
 ## [0.1.0] Initial Setup
 
-**Date:** 2024-XX-XX
+**Date:** 20XX-XX-XX
 
 ### Added
 
