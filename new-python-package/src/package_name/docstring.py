@@ -20,8 +20,8 @@ Functions:
     def docstring_example(
         param1: int,
         param2: str = "Unknown",
-        *args: tuple,
-        **kwargs: dict,
+        *args: object,
+        **kwargs: object,
         # ) -> None
         # ) -> bool
         # ) -> int
@@ -56,8 +56,8 @@ def count_words(
 def docstring_example(
         param1: int,
         param2: str = "Unknown",
-        *args: tuple,
-        **kwargs: dict,
+        *args: object,
+        **kwargs: object,
         # ) -> None:  # return None
         # ) -> bool:  # return True | False
         # ) -> int:  # return param1
@@ -86,9 +86,9 @@ def docstring_example(
             Defaults to True.
             Defaults to False.
             Defaults to "Unknown".
-        *args (tuple):
+        *args (object):
             Variable length positional arguments.
-        **kwargs (dict):
+        **kwargs (object):
             Variable length keyword arguments.
 
     Returns:
@@ -105,7 +105,7 @@ def docstring_example(
         out (str):
             A message generated using `param2`.
     Returns:
-        out (tuple):
+        out (tuple[int, str]):
             A tuple containing multiple results.
 
     Raises:
