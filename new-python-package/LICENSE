@@ -1,5 +1,3 @@
-# -----------------------------------------------------------------------------
-
 The MIT License (MIT)
 
 Copyright (c) 20XX Anna Burova
@@ -66,5 +64,3 @@ This project uses the following third-party libraries:
     Copyright (c) 2010-2026 Marc Schlaich and Ionel Cristian Maries
     https://github.com/pytest-dev/pytest-cov
     https://pypi.org/project/pytest-cov/
-
-# -----------------------------------------------------------------------------
