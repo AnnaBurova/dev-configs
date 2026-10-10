@@ -20,11 +20,11 @@ Rules:
         `Suggested name: <new_name>`
 4. **Docstring Format & Style:**
     - Propose a single-line docstring using this exact template
-        (include **one space** immediately after the opening `"""` and **one space** before the closing `"""`):
-        `""" Ensure <newt_module>.<function_name>() <tested_behavior>. """`
+        (no spaces immediately after the opening `"""` or before the closing `"""`, per PEP 257):
+        `"""Ensure <newt_module>.<function_name>() <tested_behavior>."""`
     - Use the actual NewtUtils module name and exact function name.
     - Keep it concise: maximum **15 words** and aim for **80 characters** max for the inner text
-        (excluding quotes and outer spaces), prioritizing exact function naming and clarity over the character limit.
+        (excluding quotes), prioritizing exact function naming and clarity over the character limit.
     - Clearly describe the specific behavior or edge case verified by the test.
 5. **Accuracy:**
     Rely strictly on the provided test code. Do not invent or assume unstated behavior.
@@ -36,7 +36,7 @@ For each test function, output ONLY the following block (with no introductions, 
 ```text
 <original_test_name>
 <naming verdict>
-""" <proposed docstring> """
+"""<proposed docstring>"""
 ```
 
 Tests to review:
