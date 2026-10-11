@@ -1,11 +1,11 @@
 Author: NewtCode Anna Burova
 Created: 2026-10
 
-# -----------------------------------------------------------------------------
+# --------------------------------------------------------------------- -------
 
 WinGet search XXX
 
-# -----------------------------------------------------------------------------
+# --------------------------------------------------------------------- -------
 
 # Sublime Text 4
 WinGet install --id SublimeHQ.SublimeText.4
@@ -37,7 +37,7 @@ WinGet install --id calibre.calibre
 # paint.net
 WinGet install --id dotPDN.PaintDotNet
 
-# -----------------------------------------------------------------------------
+# --------------------------------------------------------------------- -------
 
 # NVIDIA App
 WinGet install --id XP8CLZL93F5Z4P
@@ -48,7 +48,7 @@ WinGet install --id 9NF8H0H7WMLT
 # HWiNFO System Information, Monitoring and Diagnostics
 WinGet install --id REALiX.HWiNFO
 
-# -----------------------------------------------------------------------------
+# --------------------------------------------------------------------- -------
 
 # GlobalDev AI for Ollama
 WinGet install --id 9MZJ0249QJSL
@@ -56,7 +56,7 @@ WinGet install --id 9MZJ0249QJSL
 # Ollama
 WinGet install --id Ollama.Ollama
 
-# -----------------------------------------------------------------------------
+# --------------------------------------------------------------------- -------
 
 - https://github.com/amnezia-vpn/amnezia-client
 - git config http.version HTTP/1.1

@@ -3,7 +3,7 @@ Author: NewtCode Anna Burova
 Created: 2026-10
 """
 
-# ===== Imports from modules ========================================== ======= =================== ====================
+# ===== Imports from modules ========================================== =======
 
 # ----- docstring ----------------------------------------------------- ------- ------------------- --------------------
 # Re-export the most useful functions so callers can import them directly:
@@ -17,7 +17,7 @@ from .module import (
 # Example:
 # from package_name import greet, count_words
 
-# ===== Metadata ====================================================== ======= =================== ====================
+# ===== Metadata ====================================================== =======
 
 # Names listed here define the package's intended public API.
 __all__ = [
@@ -29,7 +29,7 @@ __all__ = [
     "greet",
 ]
 
-# ===== Project ======================================================= ======= =================== ====================
+# ===== Project ======================================================= =======
 
 # Update this value when the project version in pyproject.toml changes.
 __version__ = "0.1.0"
