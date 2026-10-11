@@ -1,3 +1,8 @@
+```text
+Author: NewtCode Anna Burova
+Created: 2026-10
+```
+
 # Contributing to NewtCode
 
 Thank you for your interest in contributing to NewtCode.
@@ -98,7 +103,7 @@ Every pull request should:
 - update documentation when user-facing behavior changes;
 - pass all relevant checks before review.
 
-Pull requests may be closed without merge if they are:
+Pull requests may be closed without merging if they are:
 
 - too broad;
 - poorly explained;
@@ -204,14 +209,14 @@ Check for email or other contact information in the [AUTHORS](AUTHORS) file.
 
 ## Review and Merge Policy
 
-All contributions are reviewed before merge.
+All contributions are reviewed before merging.
 
 Please expect feedback. Review comments are part of the process, not a personal attack.
 
 Maintainers reserve the right to reject contributions
 that do not fit the project, even if they are technically functional.
 
-Opening a pull request does not guarantee merge.
+Opening a pull request does not guarantee a merge.
 
 ## Contributor Checklist
 

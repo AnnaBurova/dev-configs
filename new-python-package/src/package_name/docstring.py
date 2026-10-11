@@ -1,56 +1,109 @@
-"""
+# Copyright (c) 2026 Anna Burova
+"""Docstring style guide and templates.
+
 Author: NewtCode Anna Burova
 Created: 2026-10
 
-
-Constants:
-    CONSTANT_NAME (type)
-
 Functions:
-    def function_name(
-        param1: type,
-        param2: type = "Unknown",
-        ) -> return_type
-
-
-Functions:
-    def count_words(
-        text: str,
-        ) -> int
     def docstring_example(
         param1: int,
         param2: str = "Unknown",
         *args: object,
         **kwargs: object,
-        # ) -> None
-        # ) -> bool
-        # ) -> int
-        # ) -> str
         ) -> tuple[int, str]
 """
 
 from __future__ import annotations
 
+"""Reference examples of Python function return type annotations.
 
-def count_words(
-        text: str,
-        ) -> int:
-    """ ## Count whitespace-separated words in a string.
+    ) -> return_type:
 
-    This intentionally small example demonstrates a type-annotated function and a docstring.
-    More advanced parsing rules can be added when needed.
+    # return None
+    ) -> None:
+
+    # return True | False
+    ) -> bool:
+
+    # return param1
+    ) -> int:
+
+    # return param2
+    ) -> str:
+
+    # return param1, param2
+    ) -> tuple[int, str]:
+"""
+
+"""Reference examples of Google-style Args sections.
 
     Args:
-        text (str):
-            Text to count.<br>
-            An empty string contains zero words.
+        param1 (int):
+            Description of the first parameter.<br>
+            Optional multi-line explanation or inline snippet.<br>
+            Code:
+            if else True False
+            def function_call() -> None:
+                return None
+            function_call()
+
+        param2 (str):
+            Description of the second parameter.<br>
+            Defaults to an empty string.
+            Defaults to 0 (the first element).
+            Defaults to 5.
+            Defaults to None.
+            Defaults to True.
+            Defaults to False.
+            Defaults to "Unknown".
+
+        *args (object):
+            Variable-length positional arguments.
+
+        **kwargs (object):
+            Variable-length keyword arguments.
+"""
+
+"""Reference examples of Google-style Returns sections.
+
+    Returns:
+        out (None):
+            The function does not return a value.
+
+    Returns:
+        out (bool):
+            True if the operation succeeds,<br>
+            otherwise False.
 
     Returns:
         out (int):
-            The number of whitespace-separated words.
-    """
+            The result based on `param1`.
 
-    return len(text.split())
+    Returns:
+        out (str):
+            A message generated using `param2`.
+
+    Returns:
+        out (tuple[int, str]):
+            A tuple containing multiple results.
+"""
+
+"""Reference examples of Google-style Raises sections.
+
+    Raises:
+        SystemExit:
+            If the user presses Ctrl+C (`KeyboardInterrupt`).<br>
+            If the user enters `x` to exit.<br>
+            If no valid selection is made after 5 attempts.<br>
+            If directories do not match.<br>
+            If an error occurs and `stop=True`.<br>
+
+            Terminates with code 1.
+
+        ValueError:
+            If `param1` is less than zero or `param2` is empty.
+            If the name is empty or contains only whitespace.
+"""
 
 
 def docstring_example(
@@ -58,12 +111,8 @@ def docstring_example(
         param2: str = "Unknown",
         *args: object,
         **kwargs: object,
-        # ) -> None:  # return None
-        # ) -> bool:  # return True | False
-        # ) -> int:  # return param1
-        # ) -> str:  # return param2
-        ) -> tuple[int, str]:  # return param1, param2
-    """ ## Short description of what the function does.
+        ) -> tuple[int, str]:
+    """## Short description of what the function does.
 
     An optional longer description explaining behavior, edge cases,
     and design nuances across multiple lines.
@@ -77,63 +126,41 @@ def docstring_example(
             def function_call() -> None:
                 return None
             function_call()
+
         param2 (str):
             Description of the second parameter.<br>
-            Defaults to empty string.
-            Defaults to 0 (the first element).
-            Defaults to 5.
-            Defaults to None.
-            Defaults to True.
-            Defaults to False.
             Defaults to "Unknown".
-        *args (object):
-            Variable length positional arguments.
-        **kwargs (object):
-            Variable length keyword arguments.
 
-    Returns:
-        out (None):
-            The function does not return a value.
-    Returns:
-        out (bool):
-            True if the operation succeeds,<br>
-            otherwise False.
-    Returns:
-        out (int):
-            The result based on `param1`.
-    Returns:
-        out (str):
-            A message generated using `param2`.
+        *args (object):
+            Variable-length positional arguments.
+
+        **kwargs (object):
+            Variable-length keyword arguments.
+
     Returns:
         out (tuple[int, str]):
             A tuple containing multiple results.
 
     Raises:
         SystemExit:
-            If user presses Ctrl+C (`KeyboardInterrupt`).<br>
-            If user enters `x` to exit.<br>
-            If no valid selection is made after 5 attempts.<br>
-            If directories do not match.<br>
-            If an error occurs and `stop=True`.<br>
             Terminates with code 1.
-        ValueError:
-            If `param1` is less than zero or `param2` is empty.
 
     Examples:
         ```python
-        Newt.function({3, 1, 2})
-        # Output: '{1, 2, 3}'
+        Newt.docstring_example(42, "hello")
+        # Output: (42, 'hello')
 
-        Newt.function(42)
-        # Output: '42'
+        Newt.docstring_example(1)
+        # Output: (1, 'Unknown')
         ```
-    """
 
+    """
     # TODO: Implement the function logic here
 
-    # return None
-    # return True
-    # return False
-    # return param1
-    # return param2
+    for msg in args:
+        print(msg)
+
+    for key, val in kwargs.items():
+        print(f"{key}={val}")
+
     return param1, param2

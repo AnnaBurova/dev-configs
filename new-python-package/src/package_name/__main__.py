@@ -1,10 +1,15 @@
-"""
+# Copyright (c) 2026 Anna Burova
+"""Command-line entry point for the package.
+
+This optional module makes the package runnable with `python -m package_name`.
+Remove it if the package does not need a command-line entry point.
+
 Author: NewtCode Anna Burova
 Created: 2026-10
 
-This optional module makes the package runnable with
-python -m package_name
-Remove it if the package does not need a command-line entry point.
+Functions:
+    def main(
+        ) -> None
 """
 
 from __future__ import annotations
@@ -14,8 +19,7 @@ from . import greet
 
 def main(
         ) -> None:
-    """ Run a small example to demonstrate the package. """
-
+    """## Run a small example to demonstrate the package."""
     print(greet("Python"))
 
 

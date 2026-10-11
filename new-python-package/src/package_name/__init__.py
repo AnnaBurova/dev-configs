@@ -1,32 +1,29 @@
-"""
+# Copyright (c) 2026 Anna Burova
+"""Package public API and metadata.
+
 Author: NewtCode Anna Burova
 Created: 2026-10
 """
 
 # ===== Imports from modules ========================================== =======
 
-# ----- docstring ----------------------------------------------------- ------- ------------------- --------------------
-# Re-export the most useful functions so callers can import them directly:
-from .docstring import count_words, docstring_example
+# Re-export the most useful functions so callers can import them directly
 
-# ----- module -------------------------------------------------------- ------- ------------------- --------------------
-from .module import (
+from .docstring import docstring_example
+from .functions import (
+    count_words,
     greet,
 )
 
-# Example:
-# from package_name import greet, count_words
+# Usage: from package_name import greet, count_words, docstring_example
 
 # ===== Metadata ====================================================== =======
 
 # Names listed here define the package's intended public API.
 __all__ = [
-    # ----- docstring ------------------------------------------------- ------- ------------------- --------------------
-    "count_words",
-    "docstring_example",
-
-    # ----- module ---------------------------------------------------- ------- ------------------- --------------------
-    "greet",
+    "count_words",  # ----- functions
+    "docstring_example",  # ----- docstring
+    "greet",  # ----- functions
 ]
 
 # ===== Project ======================================================= =======

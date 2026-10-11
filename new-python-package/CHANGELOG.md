@@ -6,29 +6,29 @@ Entries follow [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`).
 
 ---
 
-## [0.2.XX] New current version
+## [0.2.XX] Current Version
 
 **Date:** 20XX-XX-XX
 
 ### Added
 
-- (add new features here)
+- (Add new features here).
 
 ### Changed
 
-- (describe modifications or improvements)
+- (Describe modifications or improvements).
 
 ### Testing
 
-- (list new tests or testing improvements)
+- (List new tests or testing improvements).
 
 ### Fixed
 
-- (list bug fixes or error corrections)
+- (List bug fixes or error corrections).
 
 ### Removed
 
-- (note any removed or deprecated features)
+- (Note any removed or deprecated features).
 
 ---
 
@@ -39,7 +39,7 @@ Entries follow [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`).
 ### Added
 
 - Created initial project structure.
-- Initialized the *new-python-package* repository.
+- Initialized the `new-python-package` repository.
 - Prepared the foundation for future modules and documentation.
 
-> *The very first commit of NewtCode project.*
+> *The very first commit of the NewtCode project.*

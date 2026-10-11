@@ -1,3 +1,8 @@
+```text
+Author: NewtCode Anna Burova
+Created: 2026-10
+```
+
 # Testing the NewtCode Package
 
 This directory contains comprehensive unit tests for the **NewtCode** package.
@@ -17,9 +22,12 @@ use the PowerShell helper script:
 
 ALTERNATIVELY, install the package in editable mode MANUALLY.
 
-```sh
+```pwsh
 # Activate Virtual Environment
+(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& 'D:\VS_Code\.venv315\Scripts\Activate.ps1')
+```
 
+```sh
 # Navigate to the project directory:
 cd ./dev-configs/new-python-package/
 
@@ -29,16 +37,19 @@ python -m pip install -e ".[test]"
 
 ## Running Tests using PyTest
 
-```sh
+```pwsh
 # Activate Virtual Environment
+(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& 'D:\VS_Code\.venv315\Scripts\Activate.ps1')
+```
 
+```sh
 # Navigate to the project directory:
 cd ./dev-configs/new-python-package/
 
 # Run all tests:
 python -m pytest tests/
 
-# OR Run a specific test file:
+# OR run a specific test file:
 python -m pytest tests/test_module.py
 ```
 
@@ -68,10 +79,10 @@ pytest tests/ -s -vv > 'test_results.txt' 2>&1
 
 ### Batch Test Runner `_run_tests.ps1` or `_run_tests.sh`
 
-The script uses the virtual environments configured inside file.
+These scripts use the virtual environments configured inside the files.
 If pytest is not found in a virtual environment, that environment is skipped.
 
-It runs each module with four pytest configurations:
+They run each module with four pytest configurations:
 
 1. Default mode.
 2. Verbose mode (`-vv`).
@@ -109,22 +120,25 @@ It can help identify:
 
 ### Run Coverage
 
-```sh
+```pwsh
 # Activate Virtual Environment
+(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& 'D:\VS_Code\.venv315\Scripts\Activate.ps1')
+```
 
+```sh
 # Navigate to the project directory:
 cd ./dev-configs/new-python-package/
 
 # Run all tests:
 python -m pytest tests/ --cov=package_name --cov-report=html --cov-report=term-missing
 
-# OR Run a specific test file:
+# OR run a specific test file:
 python -m pytest tests/test_module.py --cov=package_name --cov-report=html --cov-report=term-missing
 ```
 
 These commands create an `htmlcov/` directory containing the report.
-The report highlights covered and uncovered lines.
-(green = covered, red = not covered)
+The report highlights covered and uncovered lines
+(green = covered, red = not covered).
 
 Open the report in a browser:
 
@@ -149,5 +163,5 @@ Tests can also use `capsys.readouterr()` and normal `print()` statements directl
 
 - All tests are designed to be independent and can run in any order.
 - File tests use temporary files and directories.
-- SQL tests create temporary databases that are cleaned up after tests.
+- SQL tests create temporary databases that are cleaned up afterward.
 - Network tests use mocked HTTP requests to avoid actual network calls.

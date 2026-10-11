@@ -42,14 +42,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
 # --------------------------------------------------------------------- -------
 
-This project uses components from the Python standard library,
+This project uses components from the Python Standard Library,
 licensed under the Python Software Foundation License (PSF License):
 https://docs.python.org/3/license.html
 https://docs.python.org/3/library/index.html
 
-- __future__ - Future statement definitions
+- __future__ — Future statement definitions
 
-- sys - System-specific parameters and functions
+- inspect — Inspect live objects
+- typing — Support for type hints
 
 # -----------------------------------------------------------------------------
 

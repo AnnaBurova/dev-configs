@@ -1,36 +1,30 @@
-"""
+# Copyright (c) 2026 Anna Burova
+"""Module header docstring template.
+
 Author: NewtCode Anna Burova
 Created: 2026-10
 
+Classes:
+    ClassName
+        __init__(
+            self,
+            param1: type,
+            ) -> None
+        __str__(self) -> str
+        __repr__(self) -> str
+        method_name(
+            self,
+            param1: type,
+            ) -> return_type
+
+Constants:
+    CONSTANT_NAME (type)
+
 Functions:
-    def greet(
-        name: str,
-        ) -> str
+    def function_name(
+        param1: type,
+        param2: type = "Unknown",
+        *args: object,
+        **kwargs: object,
+        ) -> return_type
 """
-
-from __future__ import annotations
-
-
-def greet(
-        name: str,
-        ) -> str:
-    """ ## Return a greeting for the supplied name.
-
-    Args:
-        name (str):
-            Name to include in the greeting.
-
-    Returns:
-        out (str):
-            A greeting with surrounding whitespace removed from the name.
-
-    Raises:
-        ValueError:
-            If the name is empty or contains only whitespace.
-    """
-
-    normalized_name = name.strip()
-    if not normalized_name:
-        raise ValueError("<name> must not be empty")
-
-    return f"Hello, {normalized_name}!"

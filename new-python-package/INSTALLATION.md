@@ -1,3 +1,8 @@
+```text
+Author: NewtCode Anna Burova
+Created: 2026-10
+```
+
 # Installing the NewtCode Package
 
 ## Project Structure Overview
@@ -9,8 +14,9 @@ new-python-package/              # Root repository
 │   └── package_name/            # Main Python package
 │       ├── __init__.py          # Defines the package's public import interface
 │       ├── __main__.py          # Optional entry point for `python -m package_name`
-│       ├── docstring.py         # Example module with a documented function
-│       ├── module.py            # Example module with a public function
+│       ├── docstring.py         # Docstring style guide and function template
+│       ├── functions.py         # Example module with public functions
+│       ├── module.py            # Module header docstring template
 │       └── (other modules)
 │
 ├── tests/                       # Manual and automated test scripts
@@ -69,13 +75,16 @@ Installs a copy of the package into the active virtual environment.
 Recommended when the project is only intended to be used
 and its source code does not need to be edited.
 
-```sh
+```pwsh
 # Activate Virtual Environment
+(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& 'D:\VS_Code\.venv315\Scripts\Activate.ps1')
+```
 
+```sh
 # Navigate to the project directory:
 cd ./dev-configs/new-python-package/
 
-# Install dependencies first (if requirements.txt exists)
+# Optional: install pinned dependencies from requirements.txt first
 python -m pip install -r requirements.txt
 
 # Install the NewtCode package
@@ -107,13 +116,16 @@ No reinstallation is required after each edit.
 - `--editable` or `-e` creates a link to the local project
 instead of copying its files into the environment.
 
-```sh
+```pwsh
 # Activate Virtual Environment
+(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& 'D:\VS_Code\.venv315\Scripts\Activate.ps1')
+```
 
+```sh
 # Navigate to the project directory:
 cd ./dev-configs/new-python-package/
 
-# Install dependencies first (if requirements.txt exists)
+# Optional: install pinned dependencies from requirements.txt first
 python -m pip install -r requirements.txt
 
 # Install the NewtCode package in editable mode, including test dependencies
@@ -124,9 +136,9 @@ python -m pip install -e ".[test]"
 
 ### Temporary Local Usage (Without Installation)
 
-To run or test functions directly from the downloaded source.
-This approach does not install anything globally;
-it only extends the Python path for the current session.
+Use this option to run or test functions directly from the downloaded source without installing the package.
+This approach does not install anything globally or into a virtual environment;
+it only extends `sys.path` for the current session.
 
 ```python
 # Import required modules
